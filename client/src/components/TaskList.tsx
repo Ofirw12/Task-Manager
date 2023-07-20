@@ -28,11 +28,11 @@ return (
             item={task}
             />)} */}
 
-<Box sx={{ flexGrow: 1 }}>
-        <Grid>
+<Box sx={{ flexGrow: 1,}}>
+        <Grid sx={{backgroundColor: 'grey.400'}}>
             {store.tasks.map(
             (task) =>
-            <Item>
+            <Item sx={{backgroundColor: 'grey.100'}}>
             <TaskListItem
             key={task.id}
             item={task}

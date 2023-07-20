@@ -40,59 +40,54 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
         <div key={item.id}>
             {item.editMode ? (
                 <div>
-                    {/* <Grid item xs={8}>
-                        <input
-                            type="text"
-                            value={item.updatedTitle}
-                            onChange={(e) => (item.updatedTitle = e.target.value)}
-                        />
-
-                        <textarea
-                            value={item.updatedDescription}
-                            onChange={(e) => (item.updatedDescription = e.target.value)}
-                            cols={30}
-                            rows={3}
-                        />
-                        <button onClick={handleClick}>Save</button>
-                    </Grid> */}
                     <Box
                         sx={{
                             width: 500,
                             maxWidth: '100%',
-                            
+                            backgroundColor: 'grey.200'
                         }}
                     >
-                        <TextField fullWidth margin="normal" label="Title" id="fullWidth"
-                        value={item.updatedTitle}
-                        onChange={(e) => (item.updatedTitle = e.target.value)}
+                        <TextField margin="normal" label="Title"
+                            sx={{ backgroundColor: 'grey.100', width:400 }}
+                            value={item.updatedTitle}
+                            onChange={(e) => (item.updatedTitle = e.target.value)}
                         />
-                        <TextField fullWidth margin="normal" label="Description" id="fullWidth"
-                        value={item.updatedDescription}
-                        onChange={(e) => (item.updatedDescription = e.target.value)}/>
+                        <TextField margin="normal" label="Description"
+                            sx={{ backgroundColor: 'grey.100',width:400 }}
+                            value={item.updatedDescription}
+                            onChange={(e) => (item.updatedDescription = e.target.value)} />
+                        <Grid item xs={2}>
                         <Fab sx={{ mr: 1 }} color="warning" size="small" aria-label="edit">
-                            <SaveIcon onClick={handleClick}/>
+                            <SaveIcon onClick={handleClick} />
                         </Fab>
+                        </Grid>
                     </Box>
                 </div>
             ) : (
                 <div>
-                    <Accordion>
+
+                    <Accordion sx={{ backgroundColor: 'grey.300' }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Typography>{item.title}</Typography>
+                            <Grid item xs={1}>
+                                <Checkbox
+                                    checked={item.completed}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        item.completed = !item.completed
+                                    }}
+                                    sx={{ mr: 1 }}
+                                />
+                            </Grid>
+                            <Grid item xs={8}><Typography>{item.title}</Typography></Grid>
                         </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
+                        <AccordionDetails sx={{ backgroundColor: 'grey.200' }}>
+                            <Typography margin="30px auto 20px auto">
                                 {item.description}
                             </Typography>
-                            <Checkbox
-                                checked={item.completed}
-                                onChange={() => (item.completed = !item.completed)}
-                                sx={{ mr: 1 }}
-                            />
                             <Fab color="warning" size="small" aria-label="edit"
                                 onClick={handleClick}
                                 sx={{ mr: 1 }}>
