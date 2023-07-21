@@ -12,7 +12,7 @@ function App() {
       <Header/>
       <AddTask/>
       <TaskList/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

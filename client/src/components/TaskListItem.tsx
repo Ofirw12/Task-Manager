@@ -13,6 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import SaveIcon from '@mui/icons-material/Save';
+import Zoom from '@mui/material/Zoom';
 interface TaskListItemProps {
     item: Task;
 }
@@ -40,39 +41,46 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
         <div key={item.id}>
             {item.editMode ? (
                 <div>
+                    <Zoom in={item.editMode}>
                     <Box
                         sx={{
-                            width: 500,
+                            width: '100%',
                             maxWidth: '100%',
                             backgroundColor: 'grey.200'
                         }}
                     >
-                        <TextField margin="normal" label="Title"
+                        <Grid item xs={4}>
+                        <TextField margin="dense" label="Title"
                             sx={{ backgroundColor: 'grey.100', width:400 }}
                             value={item.updatedTitle}
                             onChange={(e) => (item.updatedTitle = e.target.value)}
                         />
+                        </Grid>
+                        <Grid item xs={6}>
                         <TextField margin="normal" label="Description"
-                            sx={{ backgroundColor: 'grey.100',width:400 }}
+                            sx={{ backgroundColor: 'grey.100',width:600 }}
                             value={item.updatedDescription}
                             onChange={(e) => (item.updatedDescription = e.target.value)} />
+                            </Grid>
                         <Grid item xs={2}>
                         <Fab sx={{ mr: 1 }} color="warning" size="small" aria-label="edit">
                             <SaveIcon onClick={handleClick} />
                         </Fab>
                         </Grid>
                     </Box>
+                    </Zoom>
                 </div>
             ) : (
                 <div>
-
+                    <Zoom in={!item.editMode}>
                     <Accordion sx={{ backgroundColor: 'grey.300' }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Grid item xs={1}>
+                            <Grid item xs={8}>
+                            <Typography>Completed?</Typography>
                                 <Checkbox
                                     checked={item.completed}
                                     onClick={(e) => {
@@ -82,7 +90,7 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                                     sx={{ mr: 1 }}
                                 />
                             </Grid>
-                            <Grid item xs={8}><Typography>{item.title}</Typography></Grid>
+                            <Grid item xs={8}><Typography margin="30px auto 20px 100px" align="center">{item.title}</Typography></Grid>
                         </AccordionSummary>
                         <AccordionDetails sx={{ backgroundColor: 'grey.200' }}>
                             <Typography margin="30px auto 20px auto">
@@ -101,6 +109,7 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                             </Fab>
                         </AccordionDetails>
                     </Accordion>
+                    </Zoom>
                 </div>
             )}
         </div>

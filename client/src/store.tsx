@@ -34,6 +34,7 @@ class Tasks {
   tasks: Task[] = jsonTasks;
   newTitle: string = "";
   newDesc: string ="";
+  addMode: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -59,7 +60,7 @@ class Tasks {
   }
   get completedTasksCount() {
     return this.tasks.filter(
-      todo => todo.completed === true
+      task => task.completed === true
     ).length;
   }
   get report() {
