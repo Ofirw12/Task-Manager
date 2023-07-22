@@ -40,9 +40,8 @@ end
 -- Create the tables if they don't exist
 local queryUsers = [[
     CREATE TABLE IF NOT EXISTS USERS(
-        user INTEGER NOT NULL,
-        password TEXT NOT NULL,
-        CONSTRAINT PK_Users PRIMARY KEY (user)
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
     )
 ]]
 
@@ -53,7 +52,6 @@ local queryTasks = [[
         description TEXT NOT NULL,
         completed INTEGER NOT NULL,
         user INTEGER NOT NULL,
-        CONSTRAINT PK_Tasks PRIMARY KEY (id),
         CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
     )
 ]]

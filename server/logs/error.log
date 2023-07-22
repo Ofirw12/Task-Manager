@@ -1,0 +1,200 @@
+2023/07/22 21:11:02 [error] 26404#26464: *1 lua entry thread aborted: runtime error: ./server.lua:4: module 'resty.jwt' not found:
+	no field package.preload['resty.jwt']
+	no file './site/lualib/resty\jwt.ljbc'
+	no file './site/lualib/resty\jwt/init.ljbc'
+	no file './lualib/resty\jwt.ljbc'
+	no file './lualib/resty\jwt/init.ljbc'
+	no file './site/lualib/resty\jwt.lua'
+	no file './site/lualib/resty\jwt/init.lua'
+	no file './lualib/resty\jwt.lua'
+	no file './lualib/resty\jwt/init.lua'
+	no file '.\resty\jwt.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\jwt.lua'
+	no file 'C:\Program Files\openresty\lua\resty\jwt.lua'
+	no file 'C:\Program Files\openresty\lua\resty\jwt\init.lua'
+	no file './site/lualib/resty\jwt.so'
+	no file './lualib/resty\jwt.so'
+	no file '.\resty\jwt.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\jwt.so'
+	no file 'C:\Program Files\openresty\resty\jwt.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:15:22 [notice] 7584#22280: signal process started
+2023/07/22 21:15:30 [error] 18576#15000: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:5: module 'resty.hmac' not found:
+	no field package.preload['resty.hmac']
+	no file './site/lualib/resty\hmac.ljbc'
+	no file './site/lualib/resty\hmac/init.ljbc'
+	no file './lualib/resty\hmac.ljbc'
+	no file './lualib/resty\hmac/init.ljbc'
+	no file './site/lualib/resty\hmac.lua'
+	no file './site/lualib/resty\hmac/init.lua'
+	no file './lualib/resty\hmac.lua'
+	no file './lualib/resty\hmac/init.lua'
+	no file '.\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lua\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lua\resty\hmac\init.lua'
+	no file './site/lualib/resty\hmac.so'
+	no file './lualib/resty\hmac.so'
+	no file '.\resty\hmac.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\hmac.so'
+	no file 'C:\Program Files\openresty\resty\hmac.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:19:28 [notice] 24580#24628: signal process started
+2023/07/22 21:19:40 [error] 1480#18136: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:5: module 'resty.hmac' not found:
+	no field package.preload['resty.hmac']
+	no file './site/lualib/resty\hmac.ljbc'
+	no file './site/lualib/resty\hmac/init.ljbc'
+	no file './lualib/resty\hmac.ljbc'
+	no file './lualib/resty\hmac/init.ljbc'
+	no file './site/lualib/resty\hmac.lua'
+	no file './site/lualib/resty\hmac/init.lua'
+	no file './lualib/resty\hmac.lua'
+	no file './lualib/resty\hmac/init.lua'
+	no file '.\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lua\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lua\resty\hmac\init.lua'
+	no file './site/lualib/resty\hmac.so'
+	no file './lualib/resty\hmac.so'
+	no file '.\resty\hmac.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\hmac.so'
+	no file 'C:\Program Files\openresty\resty\hmac.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=2 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:19:41 [error] 1480#18136: *2 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\core\base.lua:80: loop or previous error loading module 'resty.jwt'
+stack traceback:
+coroutine 0:
+	[C]: in function 'error'
+	C:\Program Files\openresty\lualib\resty\core\base.lua:80: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=2 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:19:42 [error] 1480#18136: *3 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\core\base.lua:80: loop or previous error loading module 'resty.jwt'
+stack traceback:
+coroutine 0:
+	[C]: in function 'error'
+	C:\Program Files\openresty\lualib\resty\core\base.lua:80: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=2 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:23:03 [notice] 9500#9508: signal process started
+2023/07/22 21:23:14 [error] 16352#9812: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:5: module 'resty.hmac' not found:
+	no field package.preload['resty.hmac']
+	no file './site/lualib/resty\hmac.ljbc'
+	no file './site/lualib/resty\hmac/init.ljbc'
+	no file './lualib/resty\hmac.ljbc'
+	no file './lualib/resty\hmac/init.ljbc'
+	no file './site/lualib/resty\hmac.lua'
+	no file './site/lualib/resty\hmac/init.lua'
+	no file './lualib/resty\hmac.lua'
+	no file './lualib/resty\hmac/init.lua'
+	no file '.\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lua\resty\hmac.lua'
+	no file 'C:\Program Files\openresty\lua\resty\hmac\init.lua'
+	no file './site/lualib/resty\hmac.so'
+	no file './lualib/resty\hmac.so'
+	no file '.\resty\hmac.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\hmac.so'
+	no file 'C:\Program Files\openresty\resty\hmac.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:23:16 [error] 16352#9812: *2 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\core\base.lua:80: loop or previous error loading module 'resty.jwt'
+stack traceback:
+coroutine 0:
+	[C]: in function 'error'
+	C:\Program Files\openresty\lualib\resty\core\base.lua:80: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:23:17 [error] 16352#9812: *3 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\core\base.lua:80: loop or previous error loading module 'resty.jwt'
+stack traceback:
+coroutine 0:
+	[C]: in function 'error'
+	C:\Program Files\openresty\lualib\resty\core\base.lua:80: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:24:35 [notice] 26152#4092: signal process started
+2023/07/22 21:24:59 [error] 9620#11908: *1 lua entry thread aborted: runtime error: ./server.lua:5: module 'router' not found:
+	no field package.preload['router']
+	no file './site/lualib/router.ljbc'
+	no file './site/lualib/router/init.ljbc'
+	no file './lualib/router.ljbc'
+	no file './lualib/router/init.ljbc'
+	no file './site/lualib/router.lua'
+	no file './site/lualib/router/init.lua'
+	no file './lualib/router.lua'
+	no file './lualib/router/init.lua'
+	no file '.\router.lua'
+	no file 'C:\Program Files\openresty\lualib\router.lua'
+	no file 'C:\Program Files\openresty\lua\router.lua'
+	no file 'C:\Program Files\openresty\lua\router\init.lua'
+	no file './site/lualib/router.so'
+	no file './lualib/router.so'
+	no file '.\router.dll'
+	no file 'C:\Program Files\openresty\lualib\router.so'
+	no file 'C:\Program Files\openresty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:5: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:25:00 [error] 9620#11908: *2 lua entry thread aborted: runtime error: ./server.lua:5: module 'router' not found:
+	no field package.preload['router']
+	no file './site/lualib/router.ljbc'
+	no file './site/lualib/router/init.ljbc'
+	no file './lualib/router.ljbc'
+	no file './lualib/router/init.ljbc'
+	no file './site/lualib/router.lua'
+	no file './site/lualib/router/init.lua'
+	no file './lualib/router.lua'
+	no file './lualib/router/init.lua'
+	no file '.\router.lua'
+	no file 'C:\Program Files\openresty\lualib\router.lua'
+	no file 'C:\Program Files\openresty\lua\router.lua'
+	no file 'C:\Program Files\openresty\lua\router\init.lua'
+	no file './site/lualib/router.so'
+	no file './lualib/router.so'
+	no file '.\router.dll'
+	no file 'C:\Program Files\openresty\lualib\router.so'
+	no file 'C:\Program Files\openresty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:5: in main chunk, client: 127.0.0.1, server: , request: "POST /users?user=1&password=1 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:26:42 [notice] 20720#2456: signal process started
+2023/07/22 21:26:50 [error] 10636#9744: *1 [lua] server.lua:34: execute_sql(): Failed to execute the query: Multiple primary key defined, errno: 1068, sqlstate: 42000, client: 127.0.0.1, server: , request: "POST /users?user=1&password=3 HTTP/1.1", host: "localhost:8080"
+2023/07/22 21:28:08 [notice] 25096#12404: signal process started
+2023/07/22 21:40:57 [notice] 24196#7884: signal process started
