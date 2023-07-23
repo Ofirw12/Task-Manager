@@ -30,11 +30,15 @@ end
 local function execute_sql(query)
     local res, err, errno, sqlstate = db:query(query)
     if not res then
-        ngx.log(ngx.ERR, "Failed to execute the query: ", err, ", errno: ", errno, ", sqlstate: ", sqlstate)
-        return {}
+        ngx.log(ngx.ERR, "Failed to execute the query: ", err, ", errno: ", errno, ", sqlstate: ", sqlstate, ", Query: ", query)
+        return nil, err  -- Return nil and the error message on failure
     end
+
+    ngx.log(ngx.DEBUG, "Query executed successfully: ", query)
+    ngx.log(ngx.DEBUG, "Affected rows: ", res.affected_rows)
     return res
 end
+
 
 -- Create the tables if they don't exist
 local queryUsers = [[
@@ -63,122 +67,156 @@ ngx.on_abort(function()
     db:set_keepalive(10000, 100)
 end)
 
--- working
-r:post("/users", function(params)
--- Parse the request body as JSON
-ngx.req.read_body()
-local data = ngx.req.get_body_data()
-if not data then
-    ngx.status = ngx.HTTP_BAD_REQUEST
+local function returnError(status, message)
+    ngx.status = status
     ngx.header.content_type = "application/json"
-    ngx.say(cjson.encode({ error = "Invalid JSON data in the request body" }))
-    return
+    ngx.say(cjson.encode({ error = message }))
 end
 
--- Decode the JSON data into a Lua table
-local json_data, err = cjson.decode(data)
-if not json_data then
-    ngx.status = ngx.HTTP_BAD_REQUEST
+local function returnJSON(data)
+    ngx.status = ngx.HTTP_OK
     ngx.header.content_type = "application/json"
-    ngx.say(cjson.encode({ error = "Failed to decode JSON data: " .. err }))
-    return
+    ngx.say(cjson.encode(data))
+    ngx.exit(ngx.OK) -- Use ngx.OK instead of ngx.HTTP_OK
 end
 
--- Extract the 'user' and 'password' values from the JSON data
-local user = json_data["user"]
-local password = json_data["password"]
 
--- Check if both 'user' and 'password' values are provided
-if not user or not password then
-    ngx.status = ngx.HTTP_BAD_REQUEST
-    ngx.header.content_type = "application/json"
-    ngx.say(cjson.encode({ error = "Both 'user' and 'password' values are required in the JSON data" }))
-    return
-end
-
--- Insert the new user into the database
-local query = string.format("INSERT INTO users (user, password) VALUES (%d, '%s')", user, password)
-local result = execute_sql(query)
-
--- Fetch all users from the database after the addition
-local queryUsers = "SELECT * FROM users"
-local users = execute_sql(queryUsers)
-
--- Return the updated content of the users table as the response
-ngx.header.content_type = "application/json"
-ngx.say(cjson.encode(users))
-end)
-
---working
-r:post("/task", function(params)
+-- Function to parse and validate JSON data
+local function parseAndValidateJSON(data, required_fields)
     -- Parse the request body as JSON
     ngx.req.read_body()
-    local data = ngx.req.get_body_data()
+    data = data or ngx.req.get_body_data()
     if not data then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Invalid JSON data in the request body" }))
-        return
+        return nil, "Invalid JSON data in the request body"
     end
 
     -- Decode the JSON data into a Lua table
     local json_data, err = cjson.decode(data)
     if not json_data then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Failed to decode JSON data: " .. err }))
+        return nil, "Failed to decode JSON data: " .. err
+    end
+
+    -- Check if all required fields are provided in the JSON data
+    for _, field in ipairs(required_fields) do
+        if json_data[field] == nil then
+            return nil, string.format("'%s' value is required in the JSON data", field)
+        end
+    end
+
+    return json_data
+end
+
+r:post("/users", function(params)
+    -- Parse and validate JSON data for user creation
+    local json_data, err = parseAndValidateJSON(nil, {"user", "password"})
+    if not json_data then
+        returnError(ngx.HTTP_BAD_REQUEST, err)
         return
     end
 
-    -- Extract the values from the JSON data
-    local id = json_data["id"]
+    local user = json_data["user"]
+    local password = json_data["password"]
+
+    -- Insert the new user into the database
+    local query = string.format("INSERT INTO users (user, password) VALUES (%d, '%s')", user, password)
+    local result, err, errno, sqlstate = db:query(query)
+    if not result then
+        -- Check if the error is due to a duplicate entry (primary key conflict)
+        if errno == 1062 then
+            returnError(ngx.HTTP_CONFLICT, "User ID already exists. Please choose a different ID.")
+        else
+            returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to execute the query: " .. err)
+        end
+        return
+    end
+
+    if result.affected_rows and result.affected_rows > 0 then
+        returnJSON({ result = "success" })
+    else
+        returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to insert task into the database")
+    end
+end)
+
+-- Define a helper function to execute SQL queries
+local function execute_sql(query)
+    local res, err, errno, sqlstate = db:query(query)
+    if not res then
+        ngx.log(ngx.ERR, "Failed to execute the query: ", err, ", errno: ", errno, ", sqlstate: ", sqlstate, ", Query: ", query)
+        return nil, err
+    end
+
+    ngx.log(ngx.DEBUG, "Query executed successfully: ", query)
+    ngx.log(ngx.DEBUG, "Affected rows: ", res.affected_rows)
+    return res
+end
+
+r:post("/task", function(params)
+    -- Parse and validate JSON data for task creation
+    local json_data, err = parseAndValidateJSON(nil, {"id", "title", "description", "completed", "user"})
+    if not json_data then
+        returnError(ngx.HTTP_BAD_REQUEST, err)
+        return
+    end
+
+    local id = tonumber(json_data["id"])
     local title = json_data["title"]
     local description = json_data["description"]
-    local completed = json_data["completed"]
-    local user = json_data["user"]
+    local completed = tonumber(json_data["completed"])
+    local user = tonumber(json_data["user"])
 
-    -- Check if all required values are provided
-    if not id or not title or not description or completed == nil or not user then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "All 'id', 'title', 'description', 'completed', and 'user' values are required in the JSON data" }))
+    -- Check if all required task data is provided
+    if not id or not title or not description or not completed or not user then
+        returnError(ngx.HTTP_BAD_REQUEST, "All 'id', 'title', 'description', 'completed', and 'user' values are required in the JSON data")
+        return
+    end
+
+    -- Check if the provided user ID exists in the USERS table
+    local checkUserQuery = string.format("SELECT * FROM USERS WHERE user = %d", user)
+    local userResult = execute_sql(checkUserQuery)
+    if not userResult or #userResult == 0 then
+        returnError(ngx.HTTP_CONFLICT, "User ID does not exist. Please provide a valid User ID.")
         return
     end
 
     -- Insert the new task into the database
-    local query = string.format("INSERT INTO tasks (id, title, description, completed, user) VALUES (%d, '%s', '%s', %d, %d)",
-        id, title, description, completed and 1 or 0, user)
-    local result = execute_sql(query)
+    local query = string.format("INSERT INTO TASKS (id, title, description, completed, user) VALUES (%d, '%s', '%s', %d, %d)",
+        id, title, description, completed, user)
+    local result, err = execute_sql(query)
 
-    -- Fetch all tasks from the database after the addition
-    local queryTasks = "SELECT * FROM tasks"
-    local tasks = execute_sql(queryTasks)
+    if not result then
+        -- Check if the error is due to a duplicate entry (primary key conflict)
+        if string.find(err, "Duplicate entry", 1, true) then
+            returnError(ngx.HTTP_CONFLICT, "Task ID already exists. Please choose a different ID.")
+        else
+            returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to insert task into the database")
+        end
+        return
+    end
 
-    -- Return the updated content of the tasks table as the response
-    ngx.header.content_type = "application/json"
-    ngx.say(cjson.encode(tasks))
+    returnJSON({ result = "success" })
 end)
 
---working
+
 r:get("/tasks", function(params)
-    -- Fetch all tasks from the database
-    local query = "SELECT * FROM tasks"
-    local tasks = execute_sql(query)
+    local userId = tonumber(params.userId) -- Convert the userId parameter to a number
+    -- Fetch tasks from the database based on the provided userId
+    local query
+    if userId then
+        query = string.format("SELECT * FROM TASKS WHERE user = %d", userId)
+    else
+        query = "SELECT * FROM TASKS"
+    end
 
-    -- Return the tasks as the response
-    ngx.header.content_type = "application/json"
-    ngx.say(cjson.encode(tasks))
+    local tasks = execute_sql(query)
+    -- Return the filtered tasks as the response
+    returnJSON(tasks)
 end)
 
--- working
 r:get("/task/:id", function(params)
     local taskId = tonumber(params.id) -- Convert the id parameter to a number
-
     -- Check if the taskId is a valid number
     if not taskId then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Invalid task ID" }))
+        returnError(ngx.HTTP_BAD_REQUEST,"Invalid task ID" )
         return
     end
 
@@ -188,25 +226,18 @@ r:get("/task/:id", function(params)
 
     -- Return the task as the response
     if #tasks == 1 then
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode(tasks[1]))
+        returnJSON(tasks[1])
     else
-        ngx.status = ngx.HTTP_NOT_FOUND
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Task not found" }))
+        returnError(ngx.HTTP_NOT_FOUND,"Task not found")
     end
 end)
 
-
--- working
 r:put("/task/:id", function(params)
     local taskId = tonumber(params.id) -- Convert the id parameter to a number
 
     -- Check if the taskId is a valid number
     if not taskId then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Invalid task ID" }))
+        returnError(ngx.HTTP_BAD_REQUEST, "Invalid task ID")
         return
     end
 
@@ -214,50 +245,68 @@ r:put("/task/:id", function(params)
     ngx.req.read_body()
     local data = ngx.req.get_body_data()
     if not data then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Invalid JSON data in the request body" }))
+        returnError(ngx.HTTP_BAD_REQUEST, "Invalid JSON data in the request body")
         return
     end
 
     -- Decode the JSON data into a Lua table
     local json_data, err = cjson.decode(data)
     if not json_data then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Failed to decode JSON data: " .. err }))
+        returnError(ngx.HTTP_BAD_REQUEST, "Failed to decode JSON data: " .. err)
         return
     end
 
-    -- Update the task in the database based on the provided taskId
-    local query = string.format("UPDATE TASKS SET title = '%s', description = '%s', completed = %d, user = %d WHERE id = %d",
-        json_data.title or "", json_data.description or "", json_data.completed and 1 or 0, json_data.user or 0, taskId)
-    local result = execute_sql(query)
+    -- Check if the JSON data contains any fields to update
+    local fieldsToUpdate = {}
+    if json_data.title then
+        table.insert(fieldsToUpdate, string.format("title = '%s'", json_data.title))
+    end
+    if json_data.description then
+        table.insert(fieldsToUpdate, string.format("description = '%s'", json_data.description))
+    end
+    if json_data.completed ~= nil then
+        local completedValue = json_data.completed and 1 or 0
+        table.insert(fieldsToUpdate, string.format("completed = %d", completedValue))
+    end
 
-    -- Return a success or error response
-    if next(result) ~= nil then
+    if #fieldsToUpdate == 0 then
+        returnError(ngx.HTTP_BAD_REQUEST, "No valid fields to update in the JSON data")
+        return
+    end
+
+    -- Construct the SQL query to update the task
+    local query = string.format("UPDATE TASKS SET %s WHERE id = %d", table.concat(fieldsToUpdate, ", "), taskId)
+
+    -- Execute the SQL query
+    local result, err = execute_sql(query)
+
+    -- Check if the update was successful
+    if not result then
+        returnError(ngx.HTTP_NOT_FOUND, "Task not found or Failed to update task in the database")
+        return
+    end
+
+    if result.affected_rows and result.affected_rows > 0 then
         -- Fetch the updated task from the database
         local selectQuery = string.format("SELECT * FROM TASKS WHERE id = %d", taskId)
         local updatedTask = execute_sql(selectQuery)
-
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode(updatedTask[1]))
+        returnJSON(updatedTask[1])
     else
-        ngx.status = ngx.HTTP_NOT_FOUND
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Task not found" }))
+        returnError(ngx.HTTP_NOT_FOUND, "Task not found or Failed to update task in the database")
     end
 end)
 
---working
+
+
+
+
+
 r:delete("/task/:id", function(params)
     local taskId = tonumber(params.id) -- Convert the id parameter to a number
 
     -- Check if the taskId is a valid number
     if not taskId then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Invalid task ID" }))
+        returnError(ngx.HTTP_BAD_REQUEST,"Invalid task ID")
         return
     end
 
@@ -267,68 +316,17 @@ r:delete("/task/:id", function(params)
 
     -- Check if the delete operation was successful
     if result.affected_rows and result.affected_rows > 0 then
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ success = true }))
+        returnJSON({ result = "success" })
     else
-        ngx.status = ngx.HTTP_NOT_FOUND
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Task not found" }))
-    end
-end)
-
-
-
-
-r:get("/test", function(params)
-    -- Parse the request body as JSON
-    ngx.req.read_body()
-    local data = ngx.req.get_body_data()
-    if not data then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Invalid JSON data in the request body" }))
-        return
-    end
-
-    -- Decode the JSON data into a Lua table
-    local json_data, err = cjson.decode(data)
-    if not json_data then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "Failed to decode JSON data: " .. err }))
-        return
-    end
-
-    -- Extract the 'userId' value from the JSON data
-    local userId = json_data["userId"]
-
-    -- Check if 'userId' value is provided
-    if not userId then
-        ngx.status = ngx.HTTP_BAD_REQUEST
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "'userId' value is required in the JSON data" }))
-        return
-    end
-
-    -- Fetch user data from the database based on the provided user ID
-    local query = string.format("SELECT * FROM USERS WHERE user = %d", userId)
-    local users = execute_sql(query)
-
-    -- Return the user data as the response
-    if #users == 1 then
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode(users[1]))
-    else
-        ngx.status = ngx.HTTP_NOT_FOUND
-        ngx.header.content_type = "application/json"
-        ngx.say(cjson.encode({ error = "User not found" }))
+        returnError(ngx.HTTP_NOT_FOUND,"Task not found")
     end
 end)
 
 -- Start the server
 if not r:execute(ngx.req.get_method(), ngx.var.uri) then
-    -- Return a 404 Not Found response if no route matches the request
-    ngx.status = ngx.HTTP_NOT_FOUND
-    ngx.header.content_type = "application/json"
-    ngx.say(cjson.encode({ error = "Not found" }))
+    -- Return a 404 Not Found response if no route matches the requests
+    returnError(ngx.HTTP_NOT_FOUND,"Not found")
 end
+
+
+

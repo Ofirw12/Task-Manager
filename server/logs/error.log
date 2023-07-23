@@ -505,3 +505,112 @@ coroutine 0:
 2023/07/23 18:15:24 [notice] 12004#19220: signal process started
 2023/07/23 18:17:46 [notice] 6992#27300: signal process started
 2023/07/23 18:18:20 [notice] 28272#27620: signal process started
+2023/07/23 18:27:03 [notice] 28600#28488: signal process started
+2023/07/23 18:29:41 [notice] 17380#8724: signal process started
+2023/07/23 18:32:02 [notice] 8880#14648: signal process started
+2023/07/23 18:33:18 [notice] 28596#4020: signal process started
+2023/07/23 18:36:18 [notice] 21580#28308: signal process started
+2023/07/23 18:45:52 [notice] 19348#27300: signal process started
+2023/07/23 18:47:54 [notice] 27076#27416: signal process started
+2023/07/23 18:49:09 [notice] 23216#23664: signal process started
+2023/07/23 18:49:51 [error] 28620#27324: *1 [lua] server.lua:33: execute_sql(): Failed to execute the query: Duplicate entry '1' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:49:59 [error] 28620#27324: *1 [lua] server.lua:33: execute_sql(): Failed to execute the query: Duplicate entry '1' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:52:27 [notice] 10292#17144: signal process started
+2023/07/23 18:52:47 [error] 21448#28192: *1 lua entry thread aborted: runtime error: ./server.lua:92: Expected object key string but found T_OBJ_END at character 19
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:92: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:253: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:02:14 [notice] 3748#16172: signal process started
+2023/07/23 19:02:45 [error] 16668#8908: *1 [lua] server.lua:33: execute_sql(): Failed to execute the query: Duplicate entry '4' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:03:00 [error] 16668#8908: *1 [lua] server.lua:33: execute_sql(): Failed to execute the query: Duplicate entry '4' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:06:55 [notice] 19064#1440: signal process started
+2023/07/23 19:21:16 [notice] 28424#25492: signal process started
+2023/07/23 19:26:23 [notice] 26024#28460: signal process started
+2023/07/23 19:33:20 [notice] 20056#22216: signal process started
+2023/07/23 19:33:27 [error] 13968#28164: *1 lua entry thread aborted: runtime error: ./server.lua:50: attempt to call global 'execute_sql' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:33:29 [error] 13968#28164: *3 lua entry thread aborted: runtime error: ./server.lua:50: attempt to call global 'execute_sql' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:34:04 [notice] 12764#17448: signal process started
+2023/07/23 19:36:32 [notice] 15684#1252: signal process started
+2023/07/23 19:40:17 [notice] 18240#16872: signal process started
+2023/07/23 19:42:30 [notice] 7112#15160: signal process started
+2023/07/23 19:46:49 [error] 27712#27276: *3 [lua] server.lua:42: execute_sql_insert(): Failed to execute the query: Duplicate entry '70' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /task?userId=2 HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:46:55 [error] 27712#27276: *3 [lua] server.lua:42: execute_sql_insert(): Failed to execute the query: Duplicate entry '70' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /task?userId=1 HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:52:03 [notice] 20168#2456: signal process started
+2023/07/23 19:53:09 [error] 7268#28220: *1 lua entry thread aborted: runtime error: ./server.lua:91: Expected object key string but found T_OBJ_BEGIN at character 2
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:91: in function 'parseAndValidateJSON'
+	./server.lua:141: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:277: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:53:12 [error] 7268#28220: *4 lua entry thread aborted: runtime error: ./server.lua:91: Expected object key string but found T_OBJ_BEGIN at character 2
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:91: in function 'parseAndValidateJSON'
+	./server.lua:141: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:277: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:53:14 [error] 7268#28220: *6 lua entry thread aborted: runtime error: ./server.lua:91: Expected object key string but found T_OBJ_BEGIN at character 2
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:91: in function 'parseAndValidateJSON'
+	./server.lua:141: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:277: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 19:53:17 [notice] 25028#3248: signal process started
+2023/07/23 20:00:53 [notice] 3328#26756: signal process started
+2023/07/23 20:10:39 [error] 27100#17472: *18 [lua] server.lua:33: execute_sql(): Failed to execute the query: Duplicate entry '70' for key 'PRIMARY', errno: 1062, sqlstate: 23000, Query: INSERT INTO TASKS (id, title, description, completed, user) VALUES (70, 'Send dudes', 'open you phone and do the rest', 0, 4), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 20:20:19 [notice] 18816#14888: signal process started
+2023/07/23 20:20:29 [error] 28148#7624: *1 lua entry thread aborted: runtime error: ./server.lua:35: bad argument #1 to 'upper' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'upper'
+	./server.lua:35: in function 'execute_sql'
+	./server.lua:169: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:275: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 20:21:46 [notice] 1784#28012: signal process started
+2023/07/23 20:21:51 [error] 15532#26196: *1 lua entry thread aborted: runtime error: ./server.lua:34: bad argument #2 to 'find' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'find'
+	./server.lua:34: in function 'execute_sql'
+	./server.lua:170: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:276: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 20:21:51 [error] 15532#26196: *3 lua entry thread aborted: runtime error: ./server.lua:34: bad argument #2 to 'find' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'find'
+	./server.lua:34: in function 'execute_sql'
+	./server.lua:170: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:276: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 20:26:55 [notice] 23988#22428: signal process started
+2023/07/23 20:27:00 [error] 27360#27012: *1 [lua] server.lua:145: execute_sql(): Failed to execute the query: Duplicate entry '70' for key 'PRIMARY', errno: 1062, sqlstate: 23000, Query: INSERT INTO TASKS (id, title, description, completed, user) VALUES (70, 'Send dudes', 'open you phone and do the rest', 0, 4), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/23 20:31:31 [notice] 19284#28544: signal process started
+2023/07/23 20:34:41 [notice] 18076#21448: signal process started
+2023/07/23 20:36:53 [notice] 27560#27248: signal process started
+2023/07/23 20:39:12 [notice] 12004#12524: signal process started
+2023/07/23 20:40:54 [notice] 27496#5644: signal process started
+2023/07/23 20:41:25 [error] 23704#16544: *1 lua entry thread aborted: runtime error: ./server.lua:262: bad argument #2 to 'format' (number expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'format'
+	./server.lua:262: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:319: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/70 HTTP/1.1", host: "localhost:8080"
+2023/07/23 20:44:41 [notice] 124#1548: signal process started
+2023/07/23 20:45:00 [notice] 21552#8092: signal process started
