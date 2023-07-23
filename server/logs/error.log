@@ -198,3 +198,310 @@ coroutine 0:
 2023/07/22 21:26:50 [error] 10636#9744: *1 [lua] server.lua:34: execute_sql(): Failed to execute the query: Multiple primary key defined, errno: 1068, sqlstate: 42000, client: 127.0.0.1, server: , request: "POST /users?user=1&password=3 HTTP/1.1", host: "localhost:8080"
 2023/07/22 21:28:08 [notice] 25096#12404: signal process started
 2023/07/22 21:40:57 [notice] 24196#7884: signal process started
+2023/07/23 09:57:27 [notice] 24928#17920: signal process started
+2023/07/23 14:19:08 [error] 26336#21084: *1 CreateFile() "./html/favicon.ico" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/test"
+2023/07/23 14:23:35 [notice] 2404#20620: signal process started
+2023/07/23 14:24:55 [notice] 5372#3940: signal process started
+2023/07/23 14:25:02 [error] 7412#15436: *1 CreateFile() "./html/tes" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET /tes HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:26:05 [notice] 6920#20372: signal process started
+2023/07/23 14:26:39 [error] 24700#24748: *1 CreateFile() "./html/tes" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET /tes HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:26:43 [error] 24700#24748: *1 CreateFile() "./html/tes" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET /tes HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:38:58 [notice] 18752#15728: signal process started
+2023/07/23 14:41:43 [error] 5824#24804: *1 lua entry thread aborted: runtime error: ./server.lua:189: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:43:59 [notice] 26036#20280: signal process started
+2023/07/23 14:44:04 [error] 25164#19404: *1 lua entry thread aborted: runtime error: ./server.lua:189: attempt to call method 'route' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:45:22 [notice] 17752#3856: signal process started
+2023/07/23 14:48:21 [notice] 23540#19372: signal process started
+2023/07/23 14:50:54 [notice] 9524#17832: signal process started
+2023/07/23 14:51:04 [error] 17772#27248: *1 "./html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "POST / HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:51:33 [error] 17772#27248: *1 "./html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET / HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:51:34 [error] 17772#27248: *1 "./html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET / HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:52:10 [notice] 14500#23444: signal process started
+2023/07/23 14:52:17 [error] 24656#18940: *1 "./html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET / HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:53:02 [notice] 2536#19536: signal process started
+2023/07/23 14:53:17 [error] 27420#20696: *1 "./html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: , request: "GET / HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:53:31 [error] 27420#20696: *1 lua entry thread aborted: runtime error: ./server.lua:4: module 'resty.router' not found:
+	no field package.preload['resty.router']
+	no file './site/lualib/resty\router.ljbc'
+	no file './site/lualib/resty\router/init.ljbc'
+	no file './lualib/resty\router.ljbc'
+	no file './lualib/resty\router/init.ljbc'
+	no file './site/lualib/resty\router.lua'
+	no file './site/lualib/resty\router/init.lua'
+	no file './lualib/resty\router.lua'
+	no file './lualib/resty\router/init.lua'
+	no file '.\resty\router.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router\init.lua'
+	no file './site/lualib/resty\router.so'
+	no file './lualib/resty\router.so'
+	no file '.\resty\router.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\router.so'
+	no file 'C:\Program Files\openresty\resty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:53:35 [error] 27420#20696: *2 lua entry thread aborted: runtime error: ./server.lua:4: module 'resty.router' not found:
+	no field package.preload['resty.router']
+	no file './site/lualib/resty\router.ljbc'
+	no file './site/lualib/resty\router/init.ljbc'
+	no file './lualib/resty\router.ljbc'
+	no file './lualib/resty\router/init.ljbc'
+	no file './site/lualib/resty\router.lua'
+	no file './site/lualib/resty\router/init.lua'
+	no file './lualib/resty\router.lua'
+	no file './lualib/resty\router/init.lua'
+	no file '.\resty\router.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router\init.lua'
+	no file './site/lualib/resty\router.so'
+	no file './lualib/resty\router.so'
+	no file '.\resty\router.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\router.so'
+	no file 'C:\Program Files\openresty\resty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:53:36 [error] 27420#20696: *3 lua entry thread aborted: runtime error: ./server.lua:4: module 'resty.router' not found:
+	no field package.preload['resty.router']
+	no file './site/lualib/resty\router.ljbc'
+	no file './site/lualib/resty\router/init.ljbc'
+	no file './lualib/resty\router.ljbc'
+	no file './lualib/resty\router/init.ljbc'
+	no file './site/lualib/resty\router.lua'
+	no file './site/lualib/resty\router/init.lua'
+	no file './lualib/resty\router.lua'
+	no file './lualib/resty\router/init.lua'
+	no file '.\resty\router.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router\init.lua'
+	no file './site/lualib/resty\router.so'
+	no file './lualib/resty\router.so'
+	no file '.\resty\router.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\router.so'
+	no file 'C:\Program Files\openresty\resty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:53:39 [error] 27420#20696: *4 lua entry thread aborted: runtime error: ./server.lua:4: module 'resty.router' not found:
+	no field package.preload['resty.router']
+	no file './site/lualib/resty\router.ljbc'
+	no file './site/lualib/resty\router/init.ljbc'
+	no file './lualib/resty\router.ljbc'
+	no file './lualib/resty\router/init.ljbc'
+	no file './site/lualib/resty\router.lua'
+	no file './site/lualib/resty\router/init.lua'
+	no file './lualib/resty\router.lua'
+	no file './lualib/resty\router/init.lua'
+	no file '.\resty\router.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router\init.lua'
+	no file './site/lualib/resty\router.so'
+	no file './lualib/resty\router.so'
+	no file '.\resty\router.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\router.so'
+	no file 'C:\Program Files\openresty\resty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:55:13 [error] 27420#20696: *5 lua entry thread aborted: runtime error: ./server.lua:4: module 'resty.router' not found:
+	no field package.preload['resty.router']
+	no file './site/lualib/resty\router.ljbc'
+	no file './site/lualib/resty\router/init.ljbc'
+	no file './lualib/resty\router.ljbc'
+	no file './lualib/resty\router/init.ljbc'
+	no file './site/lualib/resty\router.lua'
+	no file './site/lualib/resty\router/init.lua'
+	no file './lualib/resty\router.lua'
+	no file './lualib/resty\router/init.lua'
+	no file '.\resty\router.lua'
+	no file 'C:\Program Files\openresty\lualib\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router.lua'
+	no file 'C:\Program Files\openresty\lua\resty\router\init.lua'
+	no file './site/lualib/resty\router.so'
+	no file './lualib/resty\router.so'
+	no file '.\resty\router.dll'
+	no file 'C:\Program Files\openresty\lualib\resty\router.so'
+	no file 'C:\Program Files\openresty\resty\router.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/resty.so'
+	no file './lualib/resty.so'
+	no file '.\resty.dll'
+	no file 'C:\Program Files\openresty\lualib\resty.so'
+	no file 'C:\Program Files\openresty\resty.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:4: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:55:45 [notice] 23128#16868: signal process started
+2023/07/23 14:55:55 [error] 27636#20356: *1 lua entry thread aborted: runtime error: ./server.lua:205: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:55:56 [error] 27636#20356: *3 lua entry thread aborted: runtime error: ./server.lua:205: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:55:57 [error] 27636#20356: *5 lua entry thread aborted: runtime error: ./server.lua:205: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 14:56:18 [notice] 17568#17064: signal process started
+2023/07/23 15:09:31 [notice] 24244#24352: signal process started
+2023/07/23 15:09:40 [error] 19020#17272: *1 lua entry thread aborted: runtime error: ./server.lua:228: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:09:41 [error] 19020#17272: *2 lua entry thread aborted: runtime error: ./server.lua:228: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:09:42 [error] 19020#17272: *3 lua entry thread aborted: runtime error: ./server.lua:228: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:09:42 [error] 19020#17272: *4 lua entry thread aborted: runtime error: ./server.lua:228: attempt to call method 'run' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:10:29 [notice] 17172#22024: signal process started
+2023/07/23 15:11:56 [notice] 16564#15940: signal process started
+2023/07/23 15:12:02 [error] 25480#9196: *1 lua entry thread aborted: runtime error: ./server.lua:222: attempt to call local 'match_found' (a boolean value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:12:03 [error] 25480#9196: *2 lua entry thread aborted: runtime error: ./server.lua:222: attempt to call local 'match_found' (a boolean value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:12:04 [error] 25480#9196: *3 lua entry thread aborted: runtime error: ./server.lua:222: attempt to call local 'match_found' (a boolean value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "GET /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:13:18 [notice] 4396#11600: signal process started
+2023/07/23 15:13:51 [notice] 26800#27412: signal process started
+2023/07/23 15:15:41 [notice] 26696#6924: signal process started
+2023/07/23 15:16:29 [notice] 19208#25220: signal process started
+2023/07/23 15:16:39 [error] 20464#19528: *1 lua entry thread aborted: runtime error: ./server.lua:69: bad argument #1 to 'decode' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:69: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:192: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:17:08 [error] 20464#19528: *3 lua entry thread aborted: runtime error: ./server.lua:69: bad argument #1 to 'decode' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:69: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:192: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 15:17:20 [notice] 16376#17032: signal process started
+2023/07/23 17:14:40 [error] 6064#10976: *3 lua entry thread aborted: runtime error: ./server.lua:69: bad argument #1 to 'decode' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:69: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:192: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 17:16:51 [notice] 23304#20380: signal process started
+2023/07/23 17:16:56 [error] 3648#28324: *1 lua entry thread aborted: runtime error: ./server.lua:69: bad argument #1 to 'decode' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:69: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:192: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 17:17:01 [error] 3648#28324: *3 lua entry thread aborted: runtime error: ./server.lua:69: bad argument #1 to 'decode' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:69: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:192: in main chunk, client: 127.0.0.1, server: , request: "POST /users HTTP/1.1", host: "localhost:8080"
+2023/07/23 17:26:38 [notice] 19524#16824: signal process started
+2023/07/23 17:29:52 [notice] 23316#23980: signal process started
+2023/07/23 17:31:53 [notice] 28132#2456: signal process started
+2023/07/23 17:38:25 [notice] 24428#17368: signal process started
+2023/07/23 17:42:56 [notice] 20524#25808: signal process started
+2023/07/23 17:43:53 [notice] 28116#24972: signal process started
+2023/07/23 17:43:58 [error] 4408#21524: *1 [lua] server.lua:33: execute_sql(): Failed to execute the query: Duplicate entry '1' for key 'PRIMARY', errno: 1062, sqlstate: 23000, client: 127.0.0.1, server: , request: "POST /test HTTP/1.1", host: "localhost:8080"
+2023/07/23 17:44:53 [notice] 17620#18064: signal process started
+2023/07/23 17:51:03 [notice] 13692#19528: signal process started
+2023/07/23 17:58:29 [notice] 5796#15052: signal process started
+2023/07/23 18:01:17 [notice] 8948#19904: signal process started
+2023/07/23 18:03:31 [notice] 14384#15252: signal process started
+2023/07/23 18:04:26 [error] 28356#24812: *1 [lua] server.lua:33: execute_sql(): Failed to execute the query: Cannot add or update a child row: a foreign key constraint fails (`tasks`.`tasks`, CONSTRAINT `FK_Tasks` FOREIGN KEY (`user`) REFERENCES `users` (`user`)), errno: 1452, sqlstate: 23000, client: 127.0.0.1, server: , request: "PUT /task/2 HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:06:59 [notice] 28244#16248: signal process started
+2023/07/23 18:07:09 [error] 23904#12524: *1 lua entry thread aborted: runtime error: ./server.lua:233: attempt to call method 'execute' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:315: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/2 HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:09:16 [notice] 28488#20800: signal process started
+2023/07/23 18:09:22 [error] 13324#27664: *1 lua entry thread aborted: runtime error: ./server.lua:233: attempt to call method 'execute' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:315: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/2 HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:09:24 [error] 13324#27664: *3 lua entry thread aborted: runtime error: ./server.lua:233: attempt to call method 'execute' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:315: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/2 HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:09:31 [error] 13324#27664: *5 lua entry thread aborted: runtime error: ./server.lua:233: attempt to call method 'execute' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:315: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/2 HTTP/1.1", host: "localhost:8080"
+2023/07/23 18:09:33 [notice] 26036#26780: signal process started
+2023/07/23 18:15:24 [notice] 12004#19220: signal process started
+2023/07/23 18:17:46 [notice] 6992#27300: signal process started
+2023/07/23 18:18:20 [notice] 28272#27620: signal process started
