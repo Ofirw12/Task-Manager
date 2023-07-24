@@ -614,3 +614,721 @@ coroutine 0:
 	./server.lua:319: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/70 HTTP/1.1", host: "localhost:8080"
 2023/07/23 20:44:41 [notice] 124#1548: signal process started
 2023/07/23 20:45:00 [notice] 21552#8092: signal process started
+2023/07/23 21:52:15 [notice] 8552#2136: signal process started
+2023/07/23 21:53:28 [notice] 10640#24356: signal process started
+2023/07/23 21:54:25 [notice] 8700#20832: signal process started
+2023/07/23 22:00:58 [notice] 21196#14868: signal process started
+2023/07/23 22:03:44 [notice] 3424#28380: signal process started
+2023/07/23 22:03:49 [error] 28004#27612: *1 lua entry thread aborted: runtime error: ./server.lua:189: bad argument #1 to 'log' (number expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'log'
+	./server.lua:189: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:313: in main chunk, client: 127.0.0.1, server: , request: "GET /tasks?userId=3 HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:04:58 [notice] 22492#19672: signal process started
+2023/07/23 22:12:05 [notice] 21172#19348: signal process started
+2023/07/23 22:19:09 [notice] 27128#23876: signal process started
+2023/07/23 22:20:25 [notice] 18844#27348: signal process started
+2023/07/23 22:20:30 [error] 16184#3920: *1 lua entry thread aborted: runtime error: ./server.lua:350: bad argument #1 to 'quote_sql_str' (string expected, got nil)
+stack traceback:
+coroutine 0:
+	[C]: in function 'quote_sql_str'
+	./server.lua:350: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:375: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:21:48 [notice] 16232#12312: signal process started
+2023/07/23 22:21:54 [error] 17920#9520: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:115: in function 'generate_token'
+	./server.lua:365: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:375: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:23:29 [notice] 15516#26476: signal process started
+2023/07/23 22:23:32 [error] 24836#22192: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:115: in function 'generate_token'
+	./server.lua:365: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:375: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:25:15 [notice] 19668#3212: signal process started
+2023/07/23 22:25:22 [error] 536#27640: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:115: in function 'generate_token'
+	./server.lua:365: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:376: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:32:39 [notice] 3968#26820: signal process started
+2023/07/23 22:32:47 [error] 7324#7316: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:118: in function 'generate_token'
+	./server.lua:369: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:380: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:34:16 [error] 7324#7316: *3 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:118: in function 'generate_token'
+	./server.lua:369: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:380: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:34:24 [error] 7324#7316: *5 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:118: in function 'generate_token'
+	./server.lua:369: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:380: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:37:01 [notice] 27972#16764: signal process started
+2023/07/23 22:37:05 [error] 28204#27356: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:118: in function 'generate_token'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:381: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:41:49 [notice] 20460#27760: signal process started
+2023/07/23 22:41:54 [error] 26916#2404: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:385: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:42:02 [error] 26916#2404: *3 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:385: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:43:38 [error] 26916#2404: *6 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:385: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:43:39 [error] 26916#2404: *8 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:385: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:43:39 [error] 26916#2404: *10 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:385: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:43:39 [error] 26916#2404: *12 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:370: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:385: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/23 22:45:28 [notice] 21596#12764: signal process started
+2023/07/24 14:36:59 [notice] 30048#26840: signal process started
+2023/07/24 14:37:14 [error] 11572#9104: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:118: in function 'generate_token'
+	./server.lua:373: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:386: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/24 14:40:16 [notice] 30756#30760: signal process started
+2023/07/24 14:40:22 [error] 29328#29096: *1 lua entry thread aborted: runtime error: C:\Program Files\openresty\lualib\resty\jwt.lua:474: attempt to index a nil value
+stack traceback:
+coroutine 0:
+	C:\Program Files\openresty\lualib\resty\jwt.lua: in function 'sign'
+	./server.lua:118: in function 'generate_token'
+	./server.lua:373: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:386: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/24 14:44:07 [notice] 19816#1820: signal process started
+2023/07/24 14:45:29 [notice] 19344#30796: signal process started
+2023/07/24 15:59:49 [notice] 31404#31100: signal process started
+2023/07/24 15:59:49 [error] 31404#31100: CreateFile() "./logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/07/24 15:59:50 [notice] 32044#31676: signal process started
+2023/07/24 15:59:50 [error] 32044#31676: CreateFile() "./logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/07/24 16:01:05 [notice] 29680#5908: signal process started
+2023/07/24 16:01:05 [error] 29680#5908: CreateFile() "./logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/07/24 17:02:03 [notice] 1912#30952: signal process started
+2023/07/24 17:15:36 [notice] 30992#22548: signal process started
+2023/07/24 17:42:29 [notice] 32272#9768: signal process started
+2023/07/24 17:47:27 [notice] 14676#6208: signal process started
+2023/07/24 17:47:29 [emerg] 25632#14020: CreateFile() ".//path/to/error.log" failed (3: The system cannot find the path specified)
+2023/07/24 17:47:40 [emerg] 26008#24868: CreateFile() ".//path/to/error.log" failed (3: The system cannot find the path specified)
+2023/07/24 17:48:00 [emerg] 24668#31128: CreateFile() ".//path/to/error.log" failed (3: The system cannot find the path specified)
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:132: generateToken(): Payload: {"sub":"nil","exp":1690213760}
+2023/07/24 17:49:20 [debug] 13144#28872: *1 [lua] server.lua:141: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWwiLCJleHAiOjE2OTAyMTM3NjB9.MgQtmuWtAyaBj6hmLqNJZ47wqdGg-V_YnUFI9-V-vJM
+2023/07/24 17:49:23 [debug] 13144#28872: *1 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 17:49:23 [debug] 13144#28872: *1 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 17:49:23 [debug] 13144#28872: *1 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 17:49:23 [debug] 13144#28872: *1 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 17:49:23 [debug] 13144#28872: *1 [lua] server.lua:167: authenticateRequest(): Verified Data: {"raw_header":"eyJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p","payload":{},"header":{"alg":"HS256"},"raw_payload":"e30","verified":true,"signature":"-1s5ss-tCSbm2VI2cHsBTMiQy1HwJCbS2AoO9LHvvhg","valid":true}
+2023/07/24 17:53:14 [debug] 13144#28872: *4 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 17:53:14 [debug] 13144#28872: *4 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 17:53:14 [debug] 13144#28872: *4 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 17:53:14 [debug] 13144#28872: *4 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 17:53:14 [debug] 13144#28872: *4 [lua] server.lua:167: authenticateRequest(): Verified Data: {"raw_header":"eyJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p","payload":{},"header":{"alg":"HS256"},"raw_payload":"e30","verified":true,"signature":"-1s5ss-tCSbm2VI2cHsBTMiQy1HwJCbS2AoO9LHvvhg","valid":true}
+2023/07/24 17:57:33 [notice] 16968#7512: signal process started
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:132: generateToken(): Payload: {"exp":1690218339,"sub":"nil"}
+2023/07/24 19:05:39 [debug] 33980#33336: *1 [lua] server.lua:141: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTgzMzksInN1YiI6Im5pbCJ9.HXtLEtWSp9abiKFgExAmDPgJmcCsOO1b6qYUWzjG66s
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:132: generateToken(): Payload: {"exp":1690218781,"sub":"nil"}
+2023/07/24 19:13:01 [debug] 33980#33336: *3 [lua] server.lua:141: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTg3ODEsInN1YiI6Im5pbCJ9.Fy1QVrWxBz2PNMriMmNzKWJYQ-zz-uBzc5G69Nd6h2w
+2023/07/24 19:13:04 [debug] 33980#33336: *3 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:13:04 [debug] 33980#33336: *3 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:13:04 [debug] 33980#33336: *3 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:13:04 [debug] 33980#33336: *3 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:13:04 [debug] 33980#33336: *3 [lua] server.lua:167: authenticateRequest(): Token: eyJhbGciOiJIUzI1NiJ9.e30.-1s5ss-tCSbm2VI2cHsBTMiQy1HwJCbS2AoO9LHvvhg
+2023/07/24 19:13:04 [debug] 33980#33336: *3 [lua] server.lua:168: authenticateRequest(): Verified Data: {"raw_header":"eyJhbGciOiJIUzI1NiJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"e30","verified":true,"payload":{},"signature":"-1s5ss-tCSbm2VI2cHsBTMiQy1HwJCbS2AoO9LHvvhg","header":{"alg":"HS256"}}
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:132: generateToken(): Payload: {"exp":1690218891,"sub":"nil"}
+2023/07/24 19:14:51 [debug] 33980#33336: *6 [lua] server.lua:141: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTg4OTEsInN1YiI6Im5pbCJ9.d7qnNfccnS4nfSFsqnlGeOsQdgsvGghAjRxPmo2RmZ8
+2023/07/24 19:14:54 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:14:54 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:14:54 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:14:54 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:14:54 [debug] 33980#33336: *6 [lua] server.lua:167: authenticateRequest(): Token: eyJhbGciOiJIUzI1NiJ9.e30.-1s5ss-tCSbm2VI2cHsBTMiQy1HwJCbS2AoO9LHvvhg
+2023/07/24 19:14:54 [debug] 33980#33336: *6 [lua] server.lua:168: authenticateRequest(): Verified Data: {"raw_header":"eyJhbGciOiJIUzI1NiJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"e30","verified":true,"payload":{},"signature":"-1s5ss-tCSbm2VI2cHsBTMiQy1HwJCbS2AoO9LHvvhg","header":{"alg":"HS256"}}
+2023/07/24 19:15:06 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:15:06 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:15:06 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:15:06 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:15:06 [error] 33980#33336: *6 [lua] server.lua:148: verifyToken(): Failed to verify JWT: invalid jwt string, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/24 19:15:06 [debug] 33980#33336: *6 [lua] server.lua:167: authenticateRequest(): Token: {{jwtToken}}
+2023/07/24 19:15:06 [debug] 33980#33336: *6 [lua] server.lua:168: authenticateRequest(): Verified Data: null
+2023/07/24 19:15:07 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:15:07 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:15:07 [debug] 33980#33336: *6 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:15:07 [debug] 33980#33336: *6 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:15:07 [error] 33980#33336: *6 [lua] server.lua:148: verifyToken(): Failed to verify JWT: invalid jwt string, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/24 19:15:07 [debug] 33980#33336: *6 [lua] server.lua:167: authenticateRequest(): Token: {{jwtToken}}
+2023/07/24 19:15:07 [debug] 33980#33336: *6 [lua] server.lua:168: authenticateRequest(): Verified Data: null
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:132: generateToken(): Payload: {"exp":1690218994,"sub":"nil"}
+2023/07/24 19:16:34 [debug] 33980#33336: *11 [lua] server.lua:141: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTg5OTQsInN1YiI6Im5pbCJ9.SrdlunzPUZ7vHDaE-OgMtqPHsGsWll8arZfBpVXWrAM
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully: SELECT * FROM USERS WHERE user = '2'
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: nil
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:132: generateToken(): Payload: {"exp":1690219188,"sub":"nil"}
+2023/07/24 19:19:48 [debug] 33980#33336: *13 [lua] server.lua:141: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9.3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0
+2023/07/24 19:20:00 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:20:00 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:20:00 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:20:00 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:20:00 [debug] 33980#33336: *13 [lua] server.lua:167: authenticateRequest(): Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9.3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0
+2023/07/24 19:20:00 [debug] 33980#33336: *13 [lua] server.lua:168: authenticateRequest(): Verified Data: {"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9","verified":true,"payload":{"exp":1690219188,"sub":"nil"},"signature":"3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0","header":{"typ":"JWT","alg":"HS256"}}
+2023/07/24 19:20:25 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:20:25 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:20:25 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:20:25 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:20:25 [debug] 33980#33336: *13 [lua] server.lua:167: authenticateRequest(): Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9.3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0
+2023/07/24 19:20:25 [debug] 33980#33336: *13 [lua] server.lua:168: authenticateRequest(): Verified Data: {"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9","verified":true,"payload":{"exp":1690219188,"sub":"nil"},"signature":"3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0","header":{"typ":"JWT","alg":"HS256"}}
+2023/07/24 19:20:26 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS USERS(
+        user INTEGER PRIMARY KEY NOT NULL,
+        password TEXT NOT NULL
+    )
+
+2023/07/24 19:20:26 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:20:26 [debug] 33980#33336: *13 [lua] server.lua:39: executeQuery(): Query executed successfully:     CREATE TABLE IF NOT EXISTS TASKS(
+        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        completed INTEGER NOT NULL,
+        user INTEGER NOT NULL,
+        CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
+    )
+
+2023/07/24 19:20:26 [debug] 33980#33336: *13 [lua] server.lua:40: executeQuery(): Affected rows: 0
+2023/07/24 19:20:26 [debug] 33980#33336: *13 [lua] server.lua:167: authenticateRequest(): Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9.3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0
+2023/07/24 19:20:26 [debug] 33980#33336: *13 [lua] server.lua:168: authenticateRequest(): Verified Data: {"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"eyJleHAiOjE2OTAyMTkxODgsInN1YiI6Im5pbCJ9","verified":true,"payload":{"exp":1690219188,"sub":"nil"},"signature":"3QPInP4GV751ziE1YXiQgT_89Vp41Stia51K-Lx-CV0","header":{"typ":"JWT","alg":"HS256"}}
+2023/07/24 19:24:38 [notice] 34876#30000: signal process started
+2023/07/24 19:24:54 [debug] 35564#35620: *1 [lua] server.lua:132: generateToken(): Payload: {"exp":1690219494,"sub":"nil"}
+2023/07/24 19:24:54 [debug] 35564#35620: *1 [lua] server.lua:141: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMTk0OTQsInN1YiI6Im5pbCJ9.iIf6NBrOSiyCD7bZZc-80gKBj1oDJ-Y8moBTYvJUyFM
+2023/07/24 19:26:32 [notice] 31648#30000: signal process started
+2023/07/24 19:26:38 [debug] 22340#32788: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:26:38 [debug] 22340#32788: *1 [lua] server.lua:133: generateToken(): Payload: {"sub":"nil","exp":1690219598}
+2023/07/24 19:26:38 [debug] 22340#32788: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuaWwiLCJleHAiOjE2OTAyMTk1OTh9.TBA60HEocSCpIcFSnylY3Sp4dEHFqMmx38Kj6Qc2soE
+2023/07/24 19:28:39 [notice] 29000#35196: signal process started
+2023/07/24 19:28:45 [debug] 8760#28356: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:28:45 [error] 8760#28356: *1 lua entry thread aborted: runtime error: ./server.lua:129: attempt to concatenate field 'id' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'generateToken'
+	./server.lua:436: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:446: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/24 19:30:34 [notice] 35752#31348: signal process started
+2023/07/24 19:30:39 [debug] 15740#24664: *1 [lua] server.lua:125: generateToken(): User row: {"user":2,"password":"1234"}
+2023/07/24 19:30:39 [error] 15740#24664: *1 lua entry thread aborted: runtime error: ./server.lua:129: attempt to concatenate field 'id' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'generateToken'
+	./server.lua:436: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:446: in main chunk, client: 127.0.0.1, server: , request: "POST /auth HTTP/1.1", host: "localhost:8080"
+2023/07/24 19:31:10 [notice] 33832#34024: signal process started
+2023/07/24 19:31:15 [debug] 25204#30116: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:31:15 [debug] 25204#30116: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690219875}
+2023/07/24 19:31:15 [debug] 25204#30116: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMTk4NzV9.Y-D5bBtlzwBdiRHlUaa04jbrLSIxxsN0NJX8h1ukQKY
+2023/07/24 19:31:30 [debug] 25204#30116: *1 [lua] server.lua:168: authenticateRequest(): Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMTk4NzV9.Y-D5bBtlzwBdiRHlUaa04jbrLSIxxsN0NJX8h1ukQKY
+2023/07/24 19:31:30 [debug] 25204#30116: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"payload":{"exp":1690219875},"verified":true,"raw_payload":"eyJleHAiOjE2OTAyMTk4NzV9","raw_header":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9","signature":"Y-D5bBtlzwBdiRHlUaa04jbrLSIxxsN0NJX8h1ukQKY","valid":true}
+2023/07/24 19:34:10 [notice] 35804#31740: signal process started
+2023/07/24 19:34:18 [debug] 34972#28988: *1 [lua] server.lua:125: generateToken(): User row: {"user":2,"password":"1234"}
+2023/07/24 19:34:18 [debug] 34972#28988: *1 [lua] server.lua:133: generateToken(): Payload: {"sub":"nil","exp":1690220058}
+2023/07/24 19:34:18 [debug] 34972#28988: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaWwiLCJleHAiOjE2OTAyMjAwNTh9.Lktij4s8YTFCviDFQcN6EjcvgL_sfidKwWYNZqclwws
+2023/07/24 19:34:28 [debug] 34972#28988: *1 [lua] server.lua:168: authenticateRequest(): Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaWwiLCJleHAiOjE2OTAyMjAwNTh9.Lktij4s8YTFCviDFQcN6EjcvgL_sfidKwWYNZqclwws
+2023/07/24 19:34:28 [debug] 34972#28988: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"verified":true,"reason":"everything is awesome~ :p","valid":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","header":{"typ":"JWT","alg":"HS256"},"raw_payload":"eyJzdWIiOiJuaWwiLCJleHAiOjE2OTAyMjAwNTh9","signature":"Lktij4s8YTFCviDFQcN6EjcvgL_sfidKwWYNZqclwws","payload":{"sub":"nil","exp":1690220058}}
+2023/07/24 19:37:13 [notice] 14676#34388: signal process started
+2023/07/24 19:37:19 [debug] 33488#14588: *1 [lua] server.lua:125: generateToken(): User row: {"user":2,"password":"1234"}
+2023/07/24 19:37:19 [debug] 33488#14588: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690220239,"sub":"2"}
+2023/07/24 19:37:19 [debug] 33488#14588: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjAyMzksInN1YiI6IjIifQ.lR6nWWa91bTGErRuQUJTRsXQFC1PTQ4neoYOdZs3OgI
+2023/07/24 19:37:27 [debug] 33488#14588: *1 [lua] server.lua:168: authenticateRequest(): Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjAyMzksInN1YiI6IjIifQ.lR6nWWa91bTGErRuQUJTRsXQFC1PTQ4neoYOdZs3OgI
+2023/07/24 19:37:27 [debug] 33488#14588: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"raw_payload":"eyJleHAiOjE2OTAyMjAyMzksInN1YiI6IjIifQ","signature":"lR6nWWa91bTGErRuQUJTRsXQFC1PTQ4neoYOdZs3OgI","verified":true,"header":{"typ":"JWT","alg":"HS256"},"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p","valid":true,"payload":{"sub":"2","exp":1690220239}}
+2023/07/24 19:42:42 [notice] 31576#19928: signal process started
+2023/07/24 19:42:54 [debug] 34656#30944: *1 [lua] server.lua:167: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjAyMzksInN1YiI6IjIifQ.lR6nWWa91bTGErRuQUJTRsXQFC1PTQ4neoYOdZs3OgI
+2023/07/24 19:42:54 [debug] 34656#30944: *1 [lua] server.lua:169: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjAyMzksInN1YiI6IjIifQ.lR6nWWa91bTGErRuQUJTRsXQFC1PTQ4neoYOdZs3OgI
+2023/07/24 19:42:54 [debug] 34656#30944: *1 [lua] server.lua:173: authenticateRequest(): Verified Data: {"signature":"lR6nWWa91bTGErRuQUJTRsXQFC1PTQ4neoYOdZs3OgI","verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"eyJleHAiOjE2OTAyMjAyMzksInN1YiI6IjIifQ","payload":{"exp":1690220239,"sub":"2"},"header":{"alg":"HS256","typ":"JWT"}}
+2023/07/24 19:42:58 [debug] 34656#30944: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:42:58 [debug] 34656#30944: *1 [lua] server.lua:133: generateToken(): Payload: {"sub":"2","exp":1690220578}
+2023/07/24 19:42:58 [debug] 34656#30944: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIwNTc4fQ.l2Xs8nWP5bwBt-eD1v1sdipzjZlhv0gcnSm29ACv3Cs
+2023/07/24 19:43:08 [debug] 34656#30944: *1 [lua] server.lua:167: authenticateRequest(): Token (Before Removal): Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIwNTc4fQ.l2Xs8nWP5bwBt-eD1v1sdipzjZlhv0gcnSm29ACv3Cs
+2023/07/24 19:43:08 [debug] 34656#30944: *1 [lua] server.lua:169: authenticateRequest(): Token (After Removal): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIwNTc4fQ.l2Xs8nWP5bwBt-eD1v1sdipzjZlhv0gcnSm29ACv3Cs
+2023/07/24 19:43:08 [debug] 34656#30944: *1 [lua] server.lua:173: authenticateRequest(): Verified Data: {"signature":"l2Xs8nWP5bwBt-eD1v1sdipzjZlhv0gcnSm29ACv3Cs","verified":true,"raw_header":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9","valid":true,"reason":"everything is awesome~ :p","raw_payload":"eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIwNTc4fQ","payload":{"sub":"2","exp":1690220578},"header":{"typ":"JWT","alg":"HS256"}}
+2023/07/24 19:45:03 [notice] 8500#35624: signal process started
+2023/07/24 19:45:07 [debug] 33060#23544: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:45:07 [debug] 33060#23544: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690220707,"sub":"2"}
+2023/07/24 19:45:07 [debug] 33060#23544: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjA3MDcsInN1YiI6IjIifQ.L6FKpD9ZRzl7i-hXEMEzrIgurS6ttp1110cTY1v12I8
+2023/07/24 19:45:13 [debug] 33060#23544: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:45:13 [debug] 33060#23544: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690220713,"sub":"2"}
+2023/07/24 19:45:13 [debug] 33060#23544: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjA3MTMsInN1YiI6IjIifQ.RruOcughVTVIIiNTNcT-G_nmB6-9KtY6EWPVj6Ba4hc
+2023/07/24 19:45:17 [debug] 33060#23544: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:45:17 [debug] 33060#23544: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690220717,"sub":"2"}
+2023/07/24 19:45:17 [debug] 33060#23544: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjA3MTcsInN1YiI6IjIifQ.xrb8tFoPQTqvDRxVEluwnW8inP4pJ4hhE1IDjW_oido
+2023/07/24 19:45:24 [debug] 33060#23544: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjA3MTcsInN1YiI6IjIifQ.xrb8tFoPQTqvDRxVEluwnW8inP4pJ4hhE1IDjW_oido
+2023/07/24 19:45:24 [debug] 33060#23544: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjA3MTcsInN1YiI6IjIifQ.xrb8tFoPQTqvDRxVEluwnW8inP4pJ4hhE1IDjW_oido
+2023/07/24 19:45:24 [debug] 33060#23544: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjA3MTcsInN1YiI6IjIifQ.xrb8tFoPQTqvDRxVEluwnW8inP4pJ4hhE1IDjW_oido
+2023/07/24 19:45:24 [debug] 33060#23544: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","payload":{"sub":"2","exp":1690220717},"raw_payload":"eyJleHAiOjE2OTAyMjA3MTcsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"signature":"xrb8tFoPQTqvDRxVEluwnW8inP4pJ4hhE1IDjW_oido","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}
+2023/07/24 19:51:08 [notice] 29808#33908: signal process started
+2023/07/24 19:51:11 [debug] 32056#28340: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:51:11 [debug] 32056#28340: *1 [lua] server.lua:133: generateToken(): Payload: {"sub":"2","exp":1690221071}
+2023/07/24 19:51:11 [debug] 32056#28340: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIxMDcxfQ.AsM4t3Mr0LdD4uoWl2hJjk0bTSFnqYogPVik-bJ_Nvo
+2023/07/24 19:51:19 [debug] 32056#28340: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIxMDcxfQ.AsM4t3Mr0LdD4uoWl2hJjk0bTSFnqYogPVik-bJ_Nvo
+2023/07/24 19:51:19 [debug] 32056#28340: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIxMDcxfQ.AsM4t3Mr0LdD4uoWl2hJjk0bTSFnqYogPVik-bJ_Nvo
+2023/07/24 19:51:19 [debug] 32056#28340: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIxMDcxfQ.AsM4t3Mr0LdD4uoWl2hJjk0bTSFnqYogPVik-bJ_Nvo
+2023/07/24 19:51:19 [debug] 32056#28340: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"payload":{"sub":"2","exp":1690221071},"valid":true,"reason":"everything is awesome~ :p","verified":true,"signature":"AsM4t3Mr0LdD4uoWl2hJjk0bTSFnqYogPVik-bJ_Nvo","raw_payload":"eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIxMDcxfQ","header":{"typ":"JWT","alg":"HS256"},"raw_header":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"}
+2023/07/24 19:51:19 [error] 32056#28340: *1 lua entry thread aborted: runtime error: ./server.lua:182: variable "authenticated_user_id" not found for writing; maybe it is a built-in variable that is not changeable or you forgot to use "set $authenticated_user_id '';" in the config file to define it first
+stack traceback:
+coroutine 0:
+	[C]: in function 'error'
+	C:\Program Files\openresty\lualib\resty\core\var.lua:144: in function '__newindex'
+	./server.lua:182: in function 'authenticateRequest'
+	./server.lua:222: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:451: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/24 19:53:03 [emerg] 29956#2032: "set" directive is not allowed here in ./conf/nginx.conf:11
+2023/07/24 19:53:09 [emerg] 35164#29080: "set" directive is not allowed here in ./conf/nginx.conf:11
+2023/07/24 19:53:45 [notice] 34512#27612: signal process started
+2023/07/24 19:53:52 [debug] 32000#30116: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 19:53:52 [debug] 32000#30116: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690221232,"sub":"2"}
+2023/07/24 19:53:52 [debug] 32000#30116: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:53:58 [debug] 32000#30116: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:53:58 [debug] 32000#30116: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:53:58 [debug] 32000#30116: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:53:58 [debug] 32000#30116: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","payload":{"exp":1690221232,"sub":"2"},"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 19:54:24 [debug] 32000#30116: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:54:24 [debug] 32000#30116: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:54:24 [debug] 32000#30116: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:54:24 [debug] 32000#30116: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","payload":{"exp":1690221232,"sub":"2"},"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 19:55:26 [debug] 32000#30116: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:26 [debug] 32000#30116: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:26 [debug] 32000#30116: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:26 [debug] 32000#30116: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","payload":{"exp":1690221232,"sub":"2"},"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 19:55:53 [debug] 32000#30116: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:53 [debug] 32000#30116: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:53 [debug] 32000#30116: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:53 [debug] 32000#30116: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","payload":{"exp":1690221232,"sub":"2"},"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 19:55:55 [debug] 32000#30116: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:55 [debug] 32000#30116: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:55 [debug] 32000#30116: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:55:55 [debug] 32000#30116: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","payload":{"exp":1690221232,"sub":"2"},"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 19:56:15 [debug] 32000#30116: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:56:15 [debug] 32000#30116: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:56:15 [debug] 32000#30116: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 19:56:15 [debug] 32000#30116: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","payload":{"exp":1690221232,"sub":"2"},"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 20:06:24 [notice] 15740#5232: signal process started
+2023/07/24 20:06:53 [debug] 9152#21572: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 20:06:53 [debug] 9152#21572: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 20:06:53 [debug] 9152#21572: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 20:06:53 [debug] 9152#21572: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","payload":{"exp":1690221232,"sub":"2"},"header":{"typ":"JWT","alg":"HS256"},"valid":true,"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 20:07:07 [debug] 9152#21572: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 20:07:07 [debug] 9152#21572: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 20:07:07 [debug] 9152#21572: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ.Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU
+2023/07/24 20:07:07 [debug] 9152#21572: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"raw_payload":"eyJleHAiOjE2OTAyMjEyMzIsInN1YiI6IjIifQ","payload":{"exp":1690221232,"sub":"2"},"header":{"typ":"JWT","alg":"HS256"},"valid":true,"signature":"Nom2iaJmicj5JIKxjXzePBzdOLq71zvk3IG-grpBrCU","verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 20:07:13 [debug] 9152#21572: *1 [lua] server.lua:125: generateToken(): User row: {"user":2,"password":"1234"}
+2023/07/24 20:07:13 [debug] 9152#21572: *1 [lua] server.lua:133: generateToken(): Payload: {"sub":"2","exp":1690222033}
+2023/07/24 20:07:13 [debug] 9152#21572: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:25 [debug] 9152#21572: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:25 [debug] 9152#21572: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:25 [debug] 9152#21572: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:25 [debug] 9152#21572: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"raw_payload":"eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ","payload":{"sub":"2","exp":1690222033},"header":{"typ":"JWT","alg":"HS256"},"valid":true,"signature":"Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo","verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 20:07:32 [debug] 9152#21572: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:32 [debug] 9152#21572: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:32 [debug] 9152#21572: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:07:32 [debug] 9152#21572: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"raw_payload":"eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ","payload":{"sub":"2","exp":1690222033},"header":{"typ":"JWT","alg":"HS256"},"valid":true,"signature":"Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo","verified":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p"}
+2023/07/24 20:11:06 [notice] 34312#4048: signal process started
+2023/07/24 20:11:15 [debug] 32032#33860: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:11:15 [debug] 32032#33860: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:11:15 [debug] 32032#33860: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ.Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo
+2023/07/24 20:11:15 [debug] 32032#33860: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","valid":true,"payload":{"exp":1690222033,"sub":"2"},"header":{"alg":"HS256","typ":"JWT"},"verified":true,"signature":"Z9D5_mryRQJi6oelBrivRI4_DdH9PWnkwrCCVCYEzbo","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","raw_payload":"eyJzdWIiOiIyIiwiZXhwIjoxNjkwMjIyMDMzfQ"}
+2023/07/24 20:11:15 [debug] 32032#33860: *1 [lua] server.lua:346: f(): Task User ID: 2
+2023/07/24 20:11:15 [debug] 32032#33860: *1 [lua] server.lua:347: f(): Authenticated User ID: nil
+2023/07/24 20:11:53 [debug] 32032#33860: *1 [lua] server.lua:125: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 20:11:53 [debug] 32032#33860: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690222313,"sub":"2"}
+2023/07/24 20:11:53 [debug] 32032#33860: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:12:03 [debug] 32032#33860: *1 [lua] server.lua:168: authenticateRequest(): Token (Before Removal): Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:12:03 [debug] 32032#33860: *1 [lua] server.lua:170: authenticateRequest(): Token (After Removal): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:12:03 [debug] 32032#33860: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:12:03 [debug] 32032#33860: *1 [lua] server.lua:174: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","valid":true,"payload":{"sub":"2","exp":1690222313},"header":{"typ":"JWT","alg":"HS256"},"verified":true,"signature":"1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw","raw_header":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9","raw_payload":"eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ"}
+2023/07/24 20:12:03 [debug] 32032#33860: *1 [lua] server.lua:346: f(): Task User ID: 2
+2023/07/24 20:12:03 [debug] 32032#33860: *1 [lua] server.lua:347: f(): Authenticated User ID: nil
+2023/07/24 20:14:12 [notice] 33660#31452: signal process started
+2023/07/24 20:14:20 [debug] 34676#32416: *1 [lua] server.lua:171: authenticateRequest(): Token (Before Removal): Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:14:20 [debug] 34676#32416: *1 [lua] server.lua:173: authenticateRequest(): Token (After Removal): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:14:20 [debug] 34676#32416: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ.1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw
+2023/07/24 20:14:20 [debug] 34676#32416: *1 [lua] server.lua:177: authenticateRequest(): Verified Data: {"valid":true,"raw_header":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9","reason":"everything is awesome~ :p","payload":{"sub":"2","exp":1690222313},"raw_payload":"eyJleHAiOjE2OTAyMjIzMTMsInN1YiI6IjIifQ","header":{"alg":"HS256","typ":"JWT"},"signature":"1CxTD0yObSZR-8VGqaChOks4FaLOTZrggKK02WLnbIw","verified":true}
+2023/07/24 20:14:20 [debug] 34676#32416: *1 [lua] server.lua:349: f(): Task User ID: 2
+2023/07/24 20:14:20 [debug] 34676#32416: *1 [lua] server.lua:350: f(): Authenticated User ID: nil
+2023/07/24 20:14:26 [debug] 34676#32416: *1 [lua] server.lua:125: generateToken(): User row: {"user":2,"password":"1234"}
+2023/07/24 20:14:26 [debug] 34676#32416: *1 [lua] server.lua:133: generateToken(): Payload: {"exp":1690222466,"sub":"2"}
+2023/07/24 20:14:26 [debug] 34676#32416: *1 [lua] server.lua:142: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjI0NjYsInN1YiI6IjIifQ.0HLb2KCV-CKOcfK8LIP_aehO6AcgUZGU57nMwHeYI10
+2023/07/24 20:14:32 [debug] 34676#32416: *1 [lua] server.lua:171: authenticateRequest(): Token (Before Removal): Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjI0NjYsInN1YiI6IjIifQ.0HLb2KCV-CKOcfK8LIP_aehO6AcgUZGU57nMwHeYI10
+2023/07/24 20:14:32 [debug] 34676#32416: *1 [lua] server.lua:173: authenticateRequest(): Token (After Removal): eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjI0NjYsInN1YiI6IjIifQ.0HLb2KCV-CKOcfK8LIP_aehO6AcgUZGU57nMwHeYI10
+2023/07/24 20:14:32 [debug] 34676#32416: *1 [lua] server.lua:147: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjI0NjYsInN1YiI6IjIifQ.0HLb2KCV-CKOcfK8LIP_aehO6AcgUZGU57nMwHeYI10
+2023/07/24 20:14:32 [debug] 34676#32416: *1 [lua] server.lua:177: authenticateRequest(): Verified Data: {"valid":true,"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","reason":"everything is awesome~ :p","payload":{"sub":"2","exp":1690222466},"raw_payload":"eyJleHAiOjE2OTAyMjI0NjYsInN1YiI6IjIifQ","header":{"typ":"JWT","alg":"HS256"},"signature":"0HLb2KCV-CKOcfK8LIP_aehO6AcgUZGU57nMwHeYI10","verified":true}
+2023/07/24 20:14:32 [debug] 34676#32416: *1 [lua] server.lua:349: f(): Task User ID: 2
+2023/07/24 20:14:32 [debug] 34676#32416: *1 [lua] server.lua:350: f(): Authenticated User ID: nil
+2023/07/24 20:15:11 [notice] 34932#8492: signal process started
+2023/07/24 21:55:58 [debug] 36740#34624: *1 [lua] server.lua:122: generateToken(): User row: {"password":"1234","user":2}
+2023/07/24 21:55:58 [debug] 36740#34624: *1 [lua] server.lua:130: generateToken(): Payload: {"exp":1690228558,"sub":"2"}
+2023/07/24 21:55:58 [debug] 36740#34624: *1 [lua] server.lua:139: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjg1NTgsInN1YiI6IjIifQ.-yYOdQhzuTBSWHC9Du2gPF7B956CTuUgajTjqrE2a7Q
+2023/07/24 21:56:22 [debug] 36740#34624: *1 [lua] server.lua:144: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjg1NTgsInN1YiI6IjIifQ.-yYOdQhzuTBSWHC9Du2gPF7B956CTuUgajTjqrE2a7Q
+2023/07/24 21:56:22 [debug] 36740#34624: *1 [lua] server.lua:168: authenticateRequest(): Verified Data: {"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","verified":true,"signature":"-yYOdQhzuTBSWHC9Du2gPF7B956CTuUgajTjqrE2a7Q","reason":"everything is awesome~ :p","valid":true,"payload":{"sub":"2","exp":1690228558},"header":{"typ":"JWT","alg":"HS256"},"raw_payload":"eyJleHAiOjE2OTAyMjg1NTgsInN1YiI6IjIifQ"}
+2023/07/24 21:57:13 [notice] 29568#34036: signal process started
+2023/07/24 21:59:51 [debug] 35496#30828: *1 [lua] server.lua:122: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/24 21:59:51 [debug] 35496#30828: *1 [lua] server.lua:130: generateToken(): Payload: {"sub":"1","exp":1690228791}
+2023/07/24 21:59:51 [debug] 35496#30828: *1 [lua] server.lua:139: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:00:00 [debug] 35496#30828: *1 [lua] server.lua:144: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:00:00 [debug] 35496#30828: *1 [lua] server.lua:168: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","valid":true,"header":{"typ":"JWT","alg":"HS256"},"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","verified":true,"signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}
+2023/07/24 22:00:03 [debug] 35496#30828: *1 [lua] server.lua:144: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:00:03 [debug] 35496#30828: *1 [lua] server.lua:168: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","valid":true,"header":{"typ":"JWT","alg":"HS256"},"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","verified":true,"signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}
+2023/07/24 22:00:16 [debug] 35496#30828: *1 [lua] server.lua:144: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:00:16 [debug] 35496#30828: *1 [lua] server.lua:168: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","valid":true,"header":{"typ":"JWT","alg":"HS256"},"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","verified":true,"signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}
+2023/07/24 22:17:12 [notice] 35856#30680: signal process started
+2023/07/24 22:17:22 [debug] 7548#33080: *1 [lua] server.lua:123: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/24 22:17:22 [debug] 7548#33080: *1 [lua] server.lua:131: generateToken(): Payload: {"exp":1690229842,"sub":"1"}
+2023/07/24 22:17:22 [debug] 7548#33080: *1 [lua] server.lua:140: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjk4NDIsInN1YiI6IjEifQ.h3U8ZYk7NUJAU8VHmqaKpe4o-G4apqMoNzIcDsZ0CxE
+2023/07/24 22:17:32 [debug] 7548#33080: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjk4NDIsInN1YiI6IjEifQ.h3U8ZYk7NUJAU8VHmqaKpe4o-G4apqMoNzIcDsZ0CxE
+2023/07/24 22:17:32 [debug] 7548#33080: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"raw_payload":"eyJleHAiOjE2OTAyMjk4NDIsInN1YiI6IjEifQ","payload":{"exp":1690229842,"sub":"1"},"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"signature":"h3U8ZYk7NUJAU8VHmqaKpe4o-G4apqMoNzIcDsZ0CxE","reason":"everything is awesome~ :p"}
+2023/07/24 22:17:32 [debug] 7548#33080: *1 [lua] server.lua:187: checkUserId(): Task User ID: 2
+2023/07/24 22:17:32 [debug] 7548#33080: *1 [lua] server.lua:188: checkUserId(): Authenticated User ID: 1
+2023/07/24 22:17:46 [debug] 7548#33080: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMjk4NDIsInN1YiI6IjEifQ.h3U8ZYk7NUJAU8VHmqaKpe4o-G4apqMoNzIcDsZ0CxE
+2023/07/24 22:17:46 [debug] 7548#33080: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"raw_payload":"eyJleHAiOjE2OTAyMjk4NDIsInN1YiI6IjEifQ","payload":{"exp":1690229842,"sub":"1"},"raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","valid":true,"header":{"typ":"JWT","alg":"HS256"},"verified":true,"signature":"h3U8ZYk7NUJAU8VHmqaKpe4o-G4apqMoNzIcDsZ0CxE","reason":"everything is awesome~ :p"}
+2023/07/24 22:20:19 [debug] 7548#33080: *5 [lua] server.lua:123: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/24 22:20:19 [debug] 7548#33080: *5 [lua] server.lua:131: generateToken(): Payload: {"exp":1690230019,"sub":"4"}
+2023/07/24 22:20:19 [debug] 7548#33080: *5 [lua] server.lua:140: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMzAwMTksInN1YiI6IjQifQ.x-_LvJAz0Ffq7Bh2kqI6l4CJ9ZwA9rk4qoKyW0pRw_s
+2023/07/24 22:20:24 [notice] 35944#35888: signal process started
+2023/07/24 22:20:30 [debug] 36144#31456: *1 [lua] server.lua:123: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/24 22:20:30 [debug] 36144#31456: *1 [lua] server.lua:131: generateToken(): Payload: {"sub":"4","exp":1690230030}
+2023/07/24 22:20:30 [debug] 36144#31456: *1 [lua] server.lua:140: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDMwfQ.AKYz5_5hckwn-RfmyX1K91GC98UgGrcXdJ0yepChnZk
+2023/07/24 22:20:43 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:20:43 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","verified":true}
+2023/07/24 22:20:52 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:20:52 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","verified":true}
+2023/07/24 22:20:53 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:20:53 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","verified":true}
+2023/07/24 22:20:56 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:20:56 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","verified":true}
+2023/07/24 22:21:02 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ.zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE
+2023/07/24 22:21:02 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"1","exp":1690228791},"raw_payload":"eyJzdWIiOiIxIiwiZXhwIjoxNjkwMjI4NzkxfQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"zYLnM030tS0zh_JIyLcB6T355WjToS2zM3aBcjnySBE","verified":true}
+2023/07/24 22:21:08 [debug] 36144#31456: *1 [lua] server.lua:123: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/24 22:21:08 [debug] 36144#31456: *1 [lua] server.lua:131: generateToken(): Payload: {"sub":"4","exp":1690230068}
+2023/07/24 22:21:08 [debug] 36144#31456: *1 [lua] server.lua:140: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:16 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:16 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:21:19 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:19 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:21:22 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:22 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:21:41 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:41 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:21:41 [debug] 36144#31456: *1 [lua] server.lua:187: checkUserId(): Task User ID: 1
+2023/07/24 22:21:41 [debug] 36144#31456: *1 [lua] server.lua:188: checkUserId(): Authenticated User ID: 4
+2023/07/24 22:21:46 [debug] 36144#31456: *1 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:46 [debug] 36144#31456: *1 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:21:46 [error] 36144#31456: *1 lua entry thread aborted: runtime error: ./server.lua:353: Expected object key string but found T_OBJ_END at character 27
+stack traceback:
+coroutine 0:
+	[C]: in function 'decode'
+	./server.lua:353: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:461: in main chunk, client: 127.0.0.1, server: , request: "PUT /task/4 HTTP/1.1", host: "localhost:8080"
+2023/07/24 22:21:49 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:21:49 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:22:22 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:22:22 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:22:22 [error] 36144#31456: *14 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm proud of you' WHERE id = 4' at line 1, errno: 1064, sqlstate: 42000, Query: UPDATE TASKS SET description = 'you are doing so well so far, i'm proud of you' WHERE id = 4, client: 127.0.0.1, server: , request: "PUT /task/4 HTTP/1.1", host: "localhost:8080"
+2023/07/24 22:22:33 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:22:33 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:22:33 [error] 36144#31456: *14 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm proud of you' WHERE id = 4' at line 1, errno: 1064, sqlstate: 42000, Query: UPDATE TASKS SET description = 'you are doing so well so far, i'm proud of you' WHERE id = 4, client: 127.0.0.1, server: , request: "PUT /task/4 HTTP/1.1", host: "localhost:8080"
+2023/07/24 22:22:53 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:22:53 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:22:53 [error] 36144#31456: *14 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm proud of you' WHERE id = 4' at line 1, errno: 1064, sqlstate: 42000, Query: UPDATE TASKS SET description = 'you are doing so well so far, i'm proud of you' WHERE id = 4, client: 127.0.0.1, server: , request: "PUT /task/4 HTTP/1.1", host: "localhost:8080"
+2023/07/24 22:23:06 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:23:06 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:23:06 [error] 36144#31456: *14 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm proud of you' WHERE id = 4' at line 1, errno: 1064, sqlstate: 42000, Query: UPDATE TASKS SET title = 'test', description = 'you are doing so well so far, i'm proud of you' WHERE id = 4, client: 127.0.0.1, server: , request: "PUT /task/4 HTTP/1.1", host: "localhost:8080"
+2023/07/24 22:23:26 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:23:26 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:23:30 [debug] 36144#31456: *14 [lua] server.lua:145: verifyToken(): Verifying Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ.WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0
+2023/07/24 22:23:30 [debug] 36144#31456: *14 [lua] server.lua:169: authenticateRequest(): Verified Data: {"reason":"everything is awesome~ :p","header":{"typ":"JWT","alg":"HS256"},"valid":true,"payload":{"sub":"4","exp":1690230068},"raw_payload":"eyJzdWIiOiI0IiwiZXhwIjoxNjkwMjMwMDY4fQ","raw_header":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","signature":"WNejMWQIbYWC99XZGsvEjTvCESPoXtKz0g0xOHyQTf0","verified":true}
+2023/07/24 22:23:30 [debug] 36144#31456: *14 [lua] server.lua:187: checkUserId(): Task User ID: 2
+2023/07/24 22:23:30 [debug] 36144#31456: *14 [lua] server.lua:188: checkUserId(): Authenticated User ID: 4
+2023/07/24 22:46:54 [notice] 30828#36764: signal process started
+2023/07/24 22:48:39 [debug] 36336#8988: *1 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/24 22:48:39 [debug] 36336#8988: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690231719,"sub":"4"}
+2023/07/24 22:48:39 [debug] 36336#8988: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMzE3MTksInN1YiI6IjQifQ.r3l01cl3NLwF2sBeJRtR3kge0aBrVf4KrKMb6gbZbBk
+2023/07/24 22:50:00 [notice] 35520#9716: signal process started
+2023/07/24 22:50:06 [debug] 36316#24868: *1 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/24 22:50:06 [debug] 36316#24868: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690231806,"sub":"4"}
+2023/07/24 22:50:06 [debug] 36316#24868: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAyMzE4MDYsInN1YiI6IjQifQ.sJCG9Qbb8opfrGSbbN9ntM2yJm-U8zMrI4dJQ9MfCj8
+2023/07/24 22:56:54 [debug] 36316#24868: *3 [lua] server.lua:179: checkUserId(): Task User ID: 1
+2023/07/24 22:56:54 [debug] 36316#24868: *3 [lua] server.lua:180: checkUserId(): Authenticated User ID: 4
+2023/07/24 23:03:32 [notice] 26212#17688: signal process started
