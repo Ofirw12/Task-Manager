@@ -1332,3 +1332,580 @@ coroutine 0:
 2023/07/24 22:56:54 [debug] 36316#24868: *3 [lua] server.lua:179: checkUserId(): Task User ID: 1
 2023/07/24 22:56:54 [debug] 36316#24868: *3 [lua] server.lua:180: checkUserId(): Authenticated User ID: 4
 2023/07/24 23:03:32 [notice] 26212#17688: signal process started
+2023/07/25 16:43:05 [debug] 37132#19252: *1 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/25 16:43:40 [debug] 37132#19252: *1 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/25 18:17:54 [info] 37132#19252: *6 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:24:03 [info] 37132#19252: *18 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:25:21 [info] 37132#19252: *25 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:34:25 [notice] 5736#31556: signal process started
+2023/07/25 18:34:33 [error] 30560#26524: *1 lua entry thread aborted: runtime error: ./server.lua:202: attempt to call method 'use' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 18:35:34 [info] 30560#26524: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:39:19 [notice] 4036#26164: signal process started
+2023/07/25 18:39:42 [error] 24548#23280: *1 failed to load external Lua file "./server.lua": ./server.lua:424: syntax error near 'local', client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 18:40:43 [info] 24548#23280: *2 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:44:24 [notice] 14184#3952: signal process started
+2023/07/25 18:44:29 [error] 27636#37008: *1 lua entry thread aborted: runtime error: ./server.lua:201: attempt to call field 'set_header_filter_func' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 18:45:20 [notice] 27176#23040: signal process started
+2023/07/25 18:46:26 [info] 22160#3556: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:47:07 [notice] 1300#14108: signal process started
+2023/07/25 18:48:20 [info] 25344#28876: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:51:16 [info] 25344#28876: *6 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:51:55 [notice] 37684#28096: signal process started
+2023/07/25 18:53:07 [info] 22160#3952: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 18:56:05 [notice] 17108#19564: signal process started
+2023/07/25 18:56:10 [error] 38612#38488: *1 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call field 'new' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 18:56:16 [error] 38612#38488: *3 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call field 'new' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 18:59:26 [notice] 38660#38656: signal process started
+2023/07/25 18:59:51 [error] 34208#38560: *1 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call field 'new' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 19:00:52 [info] 34208#38560: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:02:09 [notice] 1136#22568: signal process started
+2023/07/25 19:02:15 [error] 37244#20484: *1 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call local 'cors' (a table value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 19:02:23 [error] 37244#20484: *3 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call local 'cors' (a table value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/25 19:08:49 [error] 37244#20484: *5 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call local 'cors' (a table value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:13:31 [notice] 38332#38472: signal process started
+2023/07/25 19:13:41 [error] 38328#29976: *1 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call local 'cors' (a table value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:19:33 [notice] 3468#23168: signal process started
+2023/07/25 19:19:50 [error] 38660#36928: *1 lua entry thread aborted: runtime error: ./server.lua:6: module 'cors' not found:
+	no field package.preload['cors']
+	no file './site/lualib/cors.ljbc'
+	no file './site/lualib/cors/init.ljbc'
+	no file './lualib/cors.ljbc'
+	no file './lualib/cors/init.ljbc'
+	no file './site/lualib/cors.lua'
+	no file './site/lualib/cors/init.lua'
+	no file './lualib/cors.lua'
+	no file './lualib/cors/init.lua'
+	no file '.\cors.lua'
+	no file 'C:\Program Files\openresty\lualib\cors.lua'
+	no file 'C:\Program Files\openresty\lua\cors.lua'
+	no file 'C:\Program Files\openresty\lua\cors\init.lua'
+	no file './site/lualib/cors.so'
+	no file './lualib/cors.so'
+	no file '.\cors.dll'
+	no file 'C:\Program Files\openresty\lualib\cors.so'
+	no file 'C:\Program Files\openresty\cors.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:6: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:20:41 [notice] 38876#7972: signal process started
+2023/07/25 19:20:52 [error] 5076#38136: *1 lua entry thread aborted: runtime error: ./server.lua:6: module 'cors' not found:
+	no field package.preload['cors']
+	no file './site/lualib/cors.ljbc'
+	no file './site/lualib/cors/init.ljbc'
+	no file './lualib/cors.ljbc'
+	no file './lualib/cors/init.ljbc'
+	no file './site/lualib/cors.lua'
+	no file './site/lualib/cors/init.lua'
+	no file './lualib/cors.lua'
+	no file './lualib/cors/init.lua'
+	no file '.\cors.lua'
+	no file 'C:\Program Files\openresty\lualib\cors.lua'
+	no file 'C:\Program Files\openresty\lua\cors.lua'
+	no file 'C:\Program Files\openresty\lua\cors\init.lua'
+	no file './site/lualib/cors.so'
+	no file './lualib/cors.so'
+	no file '.\cors.dll'
+	no file 'C:\Program Files\openresty\lualib\cors.so'
+	no file 'C:\Program Files\openresty\cors.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:6: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:21:11 [notice] 8292#36988: signal process started
+2023/07/25 19:21:16 [error] 22060#37472: *1 lua entry thread aborted: runtime error: ./server.lua:6: module 'lib.resty.cors' not found:
+	no field package.preload['lib.resty.cors']
+	no file './site/lualib/lib\resty\cors.ljbc'
+	no file './site/lualib/lib\resty\cors/init.ljbc'
+	no file './lualib/lib\resty\cors.ljbc'
+	no file './lualib/lib\resty\cors/init.ljbc'
+	no file './site/lualib/lib\resty\cors.lua'
+	no file './site/lualib/lib\resty\cors/init.lua'
+	no file './lualib/lib\resty\cors.lua'
+	no file './lualib/lib\resty\cors/init.lua'
+	no file '.\lib\resty\cors.lua'
+	no file 'C:\Program Files\openresty\lualib\lib\resty\cors.lua'
+	no file 'C:\Program Files\openresty\lua\lib\resty\cors.lua'
+	no file 'C:\Program Files\openresty\lua\lib\resty\cors\init.lua'
+	no file './site/lualib/lib\resty\cors.so'
+	no file './lualib/lib\resty\cors.so'
+	no file '.\lib\resty\cors.dll'
+	no file 'C:\Program Files\openresty\lualib\lib\resty\cors.so'
+	no file 'C:\Program Files\openresty\lib\resty\cors.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+	no file './site/lualib/lib.so'
+	no file './lualib/lib.so'
+	no file '.\lib.dll'
+	no file 'C:\Program Files\openresty\lualib\lib.so'
+	no file 'C:\Program Files\openresty\lib.dll'
+	no file 'C:\Program Files\openresty\loadall.dll'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	./server.lua:6: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:22:03 [notice] 28936#20836: signal process started
+2023/07/25 19:22:08 [error] 1916#14568: *1 lua entry thread aborted: runtime error: ./server.lua:191: attempt to call local 'cors' (a table value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:23:23 [notice] 22256#37296: signal process started
+2023/07/25 19:23:28 [error] 33096#21596: *1 lua entry thread aborted: runtime error: ./server.lua:192: attempt to call global 'cors' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in main chunk, client: 127.0.0.1, server: , request: "OPTIONS /auth HTTP/1.1", host: "localhost:8080"
+2023/07/25 19:26:49 [notice] 23848#37428: signal process started
+2023/07/25 19:27:25 [debug] 25024#38240: *3 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:27:25 [debug] 25024#38240: *3 [lua] server.lua:129: generateToken(): Payload: {"exp":1690306045,"sub":"1"}
+2023/07/25 19:27:25 [debug] 25024#38240: *3 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDYwNDUsInN1YiI6IjEifQ.73VB0hcKMvlgmeBxsLMO4XqRPQh6FVhAJJhWC88lL-8
+2023/07/25 19:28:25 [info] 25024#38240: *6 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:32:03 [debug] 25024#38240: *7 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:32:03 [debug] 25024#38240: *7 [lua] server.lua:129: generateToken(): Payload: {"exp":1690306323,"sub":"1"}
+2023/07/25 19:32:03 [debug] 25024#38240: *7 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDYzMjMsInN1YiI6IjEifQ.QqInSgcBRx2l02_Aa7pLL8BFTzuRVwuvGqAZ8C5i7gE
+2023/07/25 19:33:02 [debug] 25024#38240: *10 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/25 19:33:02 [debug] 25024#38240: *10 [lua] server.lua:129: generateToken(): Payload: {"exp":1690306382,"sub":"4"}
+2023/07/25 19:33:02 [debug] 25024#38240: *10 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDYzODIsInN1YiI6IjQifQ.dmpalQ4ui7A0Z83XKqDW4Cow0sr4uFgzc7fzq3sNizg
+2023/07/25 19:33:04 [info] 25024#38240: *9 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:36:57 [notice] 38272#36508: signal process started
+2023/07/25 19:38:07 [info] 1088#38644: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:47:13 [info] 1088#38644: *8 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:50:05 [info] 1088#38644: *12 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:52:02 [notice] 38744#4728: signal process started
+2023/07/25 19:52:10 [debug] 29988#37884: *1 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:52:10 [debug] 29988#37884: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690307530}
+2023/07/25 19:52:10 [debug] 29988#37884: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzA3NTMwfQ.Cje-NMuzEplYTY69iBaM1h16n5OSH362hSdJikdlEn4
+2023/07/25 19:52:25 [debug] 29988#37884: *1 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:52:25 [debug] 29988#37884: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690307545}
+2023/07/25 19:52:25 [debug] 29988#37884: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzA3NTQ1fQ.f1EJqMQ0FUvl_WO6YSuHebcBGncwmVcQbxLdwlEt7J8
+2023/07/25 19:53:10 [info] 29988#37884: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:53:17 [notice] 37944#27332: signal process started
+2023/07/25 19:53:21 [debug] 25648#19088: *1 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:53:21 [debug] 25648#19088: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690307601,"sub":"1"}
+2023/07/25 19:53:21 [debug] 25648#19088: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDc2MDEsInN1YiI6IjEifQ.5oHlPQ_oHuySKKNt5ofDEVv-LX9ChSZ71pmktTET1aY
+2023/07/25 19:53:39 [debug] 25648#19088: *1 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:53:39 [debug] 25648#19088: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690307619,"sub":"1"}
+2023/07/25 19:53:39 [debug] 25648#19088: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDc2MTksInN1YiI6IjEifQ.UOre0-9UN-pSBe9XSTaEGnFky3_pjSxrDyTgN0NlC74
+2023/07/25 19:54:22 [info] 25648#19088: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:56:19 [debug] 25648#19088: *7 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:56:19 [debug] 25648#19088: *7 [lua] server.lua:129: generateToken(): Payload: {"exp":1690307779,"sub":"1"}
+2023/07/25 19:56:19 [debug] 25648#19088: *7 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDc3NzksInN1YiI6IjEifQ.JzuVIXIJtPdEMvLKSfmiErp49nqTBXzxKb304uBFiB4
+2023/07/25 19:57:13 [debug] 25648#19088: *7 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:57:13 [debug] 25648#19088: *7 [lua] server.lua:129: generateToken(): Payload: {"exp":1690307833,"sub":"1"}
+2023/07/25 19:57:13 [debug] 25648#19088: *7 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDc4MzMsInN1YiI6IjEifQ.mHy9Vb7449_tv8YJyhwQ4LhxMYcB47upumu3CJ85oVQ
+2023/07/25 19:57:19 [info] 25648#19088: *9 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 19:58:39 [debug] 25648#19088: *12 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:58:39 [debug] 25648#19088: *12 [lua] server.lua:129: generateToken(): Payload: {"exp":1690307919,"sub":"1"}
+2023/07/25 19:58:39 [debug] 25648#19088: *12 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDc5MTksInN1YiI6IjEifQ.M8uUOgU2b3kB8Tm_24ejGhafpZJpmWXQB3XzK_yiVZQ
+2023/07/25 19:59:38 [debug] 25648#19088: *12 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 19:59:38 [debug] 25648#19088: *12 [lua] server.lua:129: generateToken(): Payload: {"exp":1690307978,"sub":"1"}
+2023/07/25 19:59:38 [debug] 25648#19088: *12 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDc5NzgsInN1YiI6IjEifQ.ADYyDnlY4U3dBIvniw89SsLQu6cd1Ga_e6dm4G9dkNQ
+2023/07/25 19:59:39 [info] 25648#19088: *14 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 20:01:29 [debug] 25648#19088: *17 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 20:01:29 [debug] 25648#19088: *17 [lua] server.lua:129: generateToken(): Payload: {"exp":1690308089,"sub":"1"}
+2023/07/25 20:01:29 [debug] 25648#19088: *17 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDgwODksInN1YiI6IjEifQ.XPQH6Xk89oMk8BCX22xQLoRMAJbCCzvaRS-KkoYYAGk
+2023/07/25 20:02:29 [info] 25648#19088: *19 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 20:02:49 [debug] 25648#19088: *20 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/25 20:02:49 [debug] 25648#19088: *20 [lua] server.lua:129: generateToken(): Payload: {"exp":1690308169,"sub":"1"}
+2023/07/25 20:02:49 [debug] 25648#19088: *20 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTAzMDgxNjksInN1YiI6IjEifQ.CGR_lTgWrABcak9ZpHt211ZtFPwl-bH1yjwQAtbiE8E
+2023/07/25 20:03:49 [info] 25648#19088: *22 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 20:10:50 [info] 25648#19088: *25 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/25 20:13:59 [notice] 27896#29496: signal process started
+2023/07/26 12:32:06 [info] 32876#17884: *4 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 12:58:26 [info] 32876#17884: *7 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 13:03:25 [info] 32876#17884: *12 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 13:32:33 [notice] 37280#19516: signal process started
+2023/07/26 17:22:06 [debug] 24972#7344: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/26 17:22:06 [debug] 24972#7344: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690384926,"sub":"1"}
+2023/07/26 17:22:06 [debug] 24972#7344: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODQ5MjYsInN1YiI6IjEifQ.spBKEUVIT-R_x6u7pEkH4lsil94fO0kkEWbYOWoDfp0
+2023/07/26 17:23:03 [info] 24972#7344: *4 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 17:31:24 [debug] 24972#7344: *6 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/26 17:31:24 [debug] 24972#7344: *6 [lua] server.lua:129: generateToken(): Payload: {"exp":1690385484,"sub":"1"}
+2023/07/26 17:31:24 [debug] 24972#7344: *6 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODU0ODQsInN1YiI6IjEifQ.l_lhUErJ8an7QXVkzn1IJA67CXZ-vY8wKku3nhg90F4
+2023/07/26 17:31:54 [debug] 24972#7344: *7 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/26 17:31:54 [debug] 24972#7344: *7 [lua] server.lua:129: generateToken(): Payload: {"exp":1690385514,"sub":"1"}
+2023/07/26 17:31:54 [debug] 24972#7344: *7 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODU1MTQsInN1YiI6IjEifQ.RwiyDMdCYrtaQVSWQa_8MNmJiRbIlMMckCKEKots7X8
+2023/07/26 17:32:25 [info] 24972#7344: *11 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 17:36:27 [debug] 24972#7344: *14 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/26 17:36:27 [debug] 24972#7344: *14 [lua] server.lua:129: generateToken(): Payload: {"exp":1690385787,"sub":"1"}
+2023/07/26 17:36:27 [debug] 24972#7344: *14 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODU3ODcsInN1YiI6IjEifQ.xyo-UHoLJjfHbz3v7jo3OdXCZsKGbZR_fq2vawEEXic
+2023/07/26 17:37:28 [info] 24972#7344: *18 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 17:54:13 [debug] 24972#7344: *19 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/26 17:54:13 [debug] 24972#7344: *19 [lua] server.lua:129: generateToken(): Payload: {"exp":1690386853,"sub":"2"}
+2023/07/26 17:54:13 [debug] 24972#7344: *19 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODY4NTMsInN1YiI6IjIifQ.4plD-92emy5fte8iq_1jwHP7mv6hAGCWH7Yfiy7NMj8
+2023/07/26 17:55:13 [info] 24972#7344: *24 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:00:50 [debug] 24972#7344: *26 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:00:50 [debug] 24972#7344: *25 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/26 18:00:50 [debug] 24972#7344: *25 [lua] server.lua:129: generateToken(): Payload: {"exp":1690387250,"sub":"1"}
+2023/07/26 18:00:50 [debug] 24972#7344: *25 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODcyNTAsInN1YiI6IjEifQ.UJn3ldmfVLOwb62RNYhmvgiOdgqTXNh2eJkU0Vm6DX4
+2023/07/26 18:01:51 [info] 24972#7344: *29 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:14:21 [debug] 24972#7344: *30 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/26 18:14:21 [debug] 24972#7344: *30 [lua] server.lua:129: generateToken(): Payload: {"exp":1690388061,"sub":"4"}
+2023/07/26 18:14:21 [debug] 24972#7344: *30 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODgwNjEsInN1YiI6IjQifQ.kFH3RAA9nUn5nVxleMSDZO6jX44w7dRIDm0dd-6acCQ
+2023/07/26 18:15:21 [info] 24972#7344: *32 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:16:17 [debug] 24972#7344: *33 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/26 18:16:17 [debug] 24972#7344: *33 [lua] server.lua:129: generateToken(): Payload: {"exp":1690388177,"sub":"4"}
+2023/07/26 18:16:17 [debug] 24972#7344: *33 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTAzODgxNzcsInN1YiI6IjQifQ.Uqv0PDJ46Ww5TxUlf5dmR6bGCHJFERpruUYsozfJznw
+2023/07/26 18:16:17 [debug] 24972#7344: *33 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:17:17 [info] 24972#7344: *35 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:17:17 [info] 24972#7344: *38 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:17:54 [debug] 24972#7344: *39 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:18:07 [debug] 24972#7344: *39 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:18:16 [notice] 25864#31272: signal process started
+2023/07/26 18:18:37 [debug] 35136#20468: *1 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/26 18:18:37 [debug] 35136#20468: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690388317}
+2023/07/26 18:18:37 [debug] 35136#20468: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMzg4MzE3fQ.onWae0G7--7csN--Zo2KfvHlzjX5NTj9pjGmz14AGmw
+2023/07/26 18:21:17 [debug] 35136#20468: *7 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:21:17 [debug] 35136#20468: *6 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/26 18:21:17 [debug] 35136#20468: *6 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690388477}
+2023/07/26 18:21:17 [debug] 35136#20468: *6 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMzg4NDc3fQ._DAwdUKnrA-a6DXGyVlvUfZxLAXfpDkrlltXACOvOyA
+2023/07/26 18:22:18 [info] 35136#20468: *10 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:28:17 [debug] 35136#20468: *12 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:28:17 [debug] 35136#20468: *11 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/26 18:28:17 [debug] 35136#20468: *11 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690388897}
+2023/07/26 18:28:17 [debug] 35136#20468: *11 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMzg4ODk3fQ.hu3T6BDYxkclfIQuK7CMcz06eNjspttV_LkFIsXXorM
+2023/07/26 18:28:37 [debug] 35136#20468: *11 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/26 18:28:37 [debug] 35136#20468: *11 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690388917}
+2023/07/26 18:28:37 [debug] 35136#20468: *11 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMzg4OTE3fQ.NC73JyyZY8KXvLN7jIs7Njt-lgAKLBLczdbf2a0aGgs
+2023/07/26 18:28:37 [debug] 35136#20468: *12 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:29:17 [info] 35136#20468: *16 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:40:28 [debug] 35136#20468: *19 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:40:51 [debug] 35136#20468: *19 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:41:28 [info] 35136#20468: *24 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:43:28 [debug] 35136#20468: *29 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:43:28 [debug] 35136#20468: *28 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 18:43:28 [debug] 35136#20468: *28 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690389808}
+2023/07/26 18:43:28 [debug] 35136#20468: *28 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzg5ODA4fQ.p9DQp00paIEoljRQJoFdsbwTeSWpm0ZMoftpWQl0r94
+2023/07/26 18:44:28 [info] 35136#20468: *32 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 18:44:32 [debug] 35136#20468: *29 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:44:32 [debug] 35136#20468: *28 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 18:44:32 [debug] 35136#20468: *28 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690389872}
+2023/07/26 18:44:32 [debug] 35136#20468: *28 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzg5ODcyfQ.Ly94ZKnWwQcU3R5KNLtsSr3N9wBeS2NhhqJZEsN0kC8
+2023/07/26 18:51:10 [debug] 35136#20468: *36 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 18:51:10 [debug] 35136#20468: *35 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 18:51:10 [debug] 35136#20468: *35 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690390270}
+2023/07/26 18:51:10 [debug] 35136#20468: *35 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkwMjcwfQ.8bNEqsgf_xuyzK2xJYjPiMnmQAzAdYGUMrZtJd8-qC0
+2023/07/26 18:52:10 [info] 35136#20468: *39 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 19:10:34 [debug] 35136#20468: *41 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 19:10:34 [debug] 35136#20468: *40 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:10:34 [debug] 35136#20468: *40 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690391434}
+2023/07/26 19:10:34 [debug] 35136#20468: *40 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkxNDM0fQ.bzRjol92oFwoGgtagiJ0h7C-21ciSH4eDfeu_syVuRU
+2023/07/26 19:11:34 [info] 35136#20468: *44 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 19:16:08 [debug] 35136#20468: *46 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/26 19:16:08 [debug] 35136#20468: *45 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:16:08 [debug] 35136#20468: *45 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690391768}
+2023/07/26 19:16:08 [debug] 35136#20468: *45 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkxNzY4fQ.DT6Atri8Aij9hPBxYzYPzagtE57sbZ8YiyXCxhBO2KE
+2023/07/26 19:17:08 [info] 35136#20468: *49 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 19:24:10 [debug] 35136#20468: *50 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:24:10 [debug] 35136#20468: *50 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690392250}
+2023/07/26 19:24:10 [debug] 35136#20468: *50 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkyMjUwfQ.eoluhUwb72-rf1CyVighGKmlt4AuW0fEhMTweSIN_aU
+2023/07/26 19:25:10 [info] 35136#20468: *54 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 19:45:16 [debug] 35136#20468: *55 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/26 19:45:16 [debug] 35136#20468: *55 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690393516}
+2023/07/26 19:45:16 [debug] 35136#20468: *55 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwMzkzNTE2fQ.xC1ROLqsKaJmj0o8noUzNC4g9VPn4s9CwHtMZ_S3qeY
+2023/07/26 19:46:03 [debug] 35136#20468: *56 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:46:03 [debug] 35136#20468: *56 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690393563}
+2023/07/26 19:46:03 [debug] 35136#20468: *56 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkzNTYzfQ.cv-GJRppqn5FTRxcU0Co13lkqtsv6k96u1wLmGNUyy0
+2023/07/26 19:46:16 [info] 35136#20468: *61 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 19:47:54 [debug] 35136#20468: *65 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:47:54 [debug] 35136#20468: *65 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690393674}
+2023/07/26 19:47:54 [debug] 35136#20468: *65 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkzNjc0fQ.deF9c0WIWgkPpjk1BkgHz4Ef0zHM6v7BftI0DRJ9zUk
+2023/07/26 19:48:55 [info] 35136#20468: *69 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/26 19:49:06 [debug] 35136#20468: *65 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:49:06 [debug] 35136#20468: *65 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690393746}
+2023/07/26 19:49:06 [debug] 35136#20468: *65 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkzNzQ2fQ.HDTO47dRLRSTA_aqHgogralAwM7xdc4U0rCCBrvVRjo
+2023/07/26 19:49:23 [debug] 35136#20468: *67 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:49:23 [debug] 35136#20468: *67 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690393763}
+2023/07/26 19:49:23 [debug] 35136#20468: *67 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkzNzYzfQ.vbWvx6q-jQ-HtsccQ4KlrUHoK9K5L9aA0Xb-BmfRsFM
+2023/07/26 19:50:02 [debug] 35136#20468: *65 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:50:02 [debug] 35136#20468: *65 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690393802}
+2023/07/26 19:50:02 [debug] 35136#20468: *65 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzkzODAyfQ.ZdZed2bMmkuN21y8nG9VHYpMdpnmV8pXFnR-1hOFfuQ
+2023/07/26 19:53:33 [debug] 35136#20468: *76 [lua] server.lua:121: generateToken(): User row: {"user":1,"password":"1234"}
+2023/07/26 19:53:33 [debug] 35136#20468: *76 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690394013}
+2023/07/26 19:53:33 [debug] 35136#20468: *76 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwMzk0MDEzfQ.Yo5OscxKNJ8GJZl9M_hAULzdt7fehMO9M_Txiysg01Q
+2023/07/26 19:53:51 [notice] 1324#19264: signal process started
+2023/07/27 11:06:00 [debug] 15768#27480: *2 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/27 11:06:00 [debug] 15768#27480: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 11:06:00 [debug] 15768#27480: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690448760}
+2023/07/27 11:06:00 [debug] 15768#27480: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDQ4NzYwfQ.GBtb6uD0LWa-V5T7lSGhLQAgtv_3gutUcKZPStd1XN8
+2023/07/27 11:06:40 [debug] 15768#27480: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:06:40 [debug] 15768#27480: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690448800}
+2023/07/27 11:06:40 [debug] 15768#27480: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDQ4ODAwfQ.ZzXZgedx2LPc_nP_th0xwygMOSiW0PTcONcYTksf0Jw
+2023/07/27 11:07:00 [info] 15768#27480: *7 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 11:08:12 [debug] 15768#27480: *11 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 11:08:12 [debug] 15768#27480: *11 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690448892}
+2023/07/27 11:08:12 [debug] 15768#27480: *11 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDQ4ODkyfQ.xA2apGqeyIXO_IB0kpTQS5jvjsUipePWmkcqzRRWdrU
+2023/07/27 11:09:12 [info] 15768#27480: *15 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 11:09:50 [debug] 15768#27480: *16 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:09:50 [debug] 15768#27480: *16 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690448990}
+2023/07/27 11:09:50 [debug] 15768#27480: *16 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDQ4OTkwfQ.ItopnXh-ampwWE9LWD4C46XyDcjc01ND9yJZzExGp7M
+2023/07/27 11:15:29 [debug] 15768#27480: *19 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 11:15:29 [debug] 15768#27480: *19 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690449329}
+2023/07/27 11:15:29 [debug] 15768#27480: *19 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDQ5MzI5fQ.hS5QHIhXwzd7CDnT7eCBpPn9QwwMDncG4-yjNub8B9g
+2023/07/27 11:15:36 [debug] 15768#27480: *19 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:15:36 [debug] 15768#27480: *19 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690449336}
+2023/07/27 11:15:36 [debug] 15768#27480: *19 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDQ5MzM2fQ.u1QDoct0cw706vvYage4cm6anUFlX8bhDMUMfZE88kI
+2023/07/27 11:15:48 [debug] 15768#27480: *20 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:15:48 [debug] 15768#27480: *20 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690449348}
+2023/07/27 11:15:48 [debug] 15768#27480: *20 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDQ5MzQ4fQ.IPj6u3urY-tuTGLRqEvmXLNSo2yl6aq9lx5oyPYY1lM
+2023/07/27 11:16:29 [info] 15768#27480: *23 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 11:18:13 [debug] 15768#27480: *28 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:18:13 [debug] 15768#27480: *28 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690449493}
+2023/07/27 11:18:13 [debug] 15768#27480: *28 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDQ5NDkzfQ.Ehx86RqHpqpFMuPd9ff25xe0mNsFeQfWM6NO4Ueh4pM
+2023/07/27 11:19:14 [info] 15768#27480: *32 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 11:42:30 [notice] 15996#25232: signal process started
+2023/07/27 11:42:37 [debug] 7496#26308: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:42:37 [debug] 7496#26308: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690450957,"sub":"4"}
+2023/07/27 11:42:37 [debug] 7496#26308: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0NTA5NTcsInN1YiI6IjQifQ.RvybsW_fWbJsKMX0YO96ARzGif8vYnDzGR0pcYe8rYI
+2023/07/27 11:45:52 [notice] 38512#2052: signal process started
+2023/07/27 11:46:03 [debug] 15988#34812: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:46:03 [debug] 15988#34812: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690451163,"sub":"4"}
+2023/07/27 11:46:03 [debug] 15988#34812: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0NTExNjMsInN1YiI6IjQifQ.Y-EuEEN4bP-n46bQJFS_ZF9Qhs87Ka2mOuNLkUwsCDg
+2023/07/27 11:47:28 [notice] 17372#20012: signal process started
+2023/07/27 11:47:32 [debug] 15456#11820: *1 [lua] server.lua:121: generateToken(): User row: {"user":4,"password":"1234"}
+2023/07/27 11:47:32 [debug] 15456#11820: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690451252,"sub":"4"}
+2023/07/27 11:47:32 [debug] 15456#11820: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTA0NTEyNTIsInN1YiI6IjQifQ.SmswudmDF6cXAiktR8m-pD--HfdFdoMJIzqpnpNYyn8
+2023/07/27 11:50:49 [notice] 3160#31300: signal process started
+2023/07/27 11:50:54 [debug] 21680#28072: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:50:54 [debug] 21680#28072: *1 [lua] server.lua:129: generateToken(): Payload: {"exp":1690451454,"sub":"4"}
+2023/07/27 11:50:54 [debug] 21680#28072: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0NTE0NTQsInN1YiI6IjQifQ.Am10HC7aTbc98Xfkzq76pBIUPyqetj7eBDzSr8hoImA
+2023/07/27 11:51:02 [error] 21680#28072: *1 lua entry thread aborted: runtime error: ./server.lua:278: attempt to call method 'last_insert_id' (a nil value)
+stack traceback:
+coroutine 0:
+	./server.lua: in function 'f'
+	C:\Program Files\openresty\lualib\router.lua:118: in function 'execute'
+	./server.lua:473: in main chunk, client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080"
+2023/07/27 11:53:22 [notice] 5716#15304: signal process started
+2023/07/27 11:53:29 [debug] 38452#4252: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 11:53:29 [debug] 38452#4252: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690451609}
+2023/07/27 11:53:29 [debug] 38452#4252: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDUxNjA5fQ.BJfepNrja5X-SbgayGkSIpSzs8VAwHyH1a2y07J97WY
+2023/07/27 11:55:44 [notice] 19824#24372: signal process started
+2023/07/27 11:59:23 [debug] 29100#35532: *3 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 11:59:23 [debug] 29100#35532: *3 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690451963}
+2023/07/27 11:59:23 [debug] 29100#35532: *3 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUxOTYzfQ.aMpBd94LopazNvOexhS5mp4WyWOPS9Yv7VYskfpEpOY
+2023/07/27 12:00:24 [info] 29100#35532: *7 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:00:27 [debug] 29100#35532: *3 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:00:27 [debug] 29100#35532: *3 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690452027}
+2023/07/27 12:00:27 [debug] 29100#35532: *3 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUyMDI3fQ.JNUIprQSRzwD-oUl5Vf1RZOHNMygSB3uqFUUaJqMyTc
+2023/07/27 12:07:21 [debug] 29100#35532: *15 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:07:21 [debug] 29100#35532: *15 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690452441}
+2023/07/27 12:07:21 [debug] 29100#35532: *15 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUyNDQxfQ.xMgwPVw8nUIWGC1vg7IYTd2A7MUNV55sH8B2rUy9ckA
+2023/07/27 12:08:21 [info] 29100#35532: *20 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:14:09 [debug] 29100#35532: *23 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:14:09 [debug] 29100#35532: *23 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690452849}
+2023/07/27 12:14:09 [debug] 29100#35532: *23 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUyODQ5fQ.HnhXq6anfxtCl6F2MPOAJQpr_sMWzeV5QuTcnU-9YUI
+2023/07/27 12:14:35 [debug] 29100#35532: *23 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:14:35 [debug] 29100#35532: *23 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690452875}
+2023/07/27 12:14:35 [debug] 29100#35532: *23 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUyODc1fQ.6gcrWw5Z3Sd5CkL3FNeopQvPgNJhKXzMwQW1ja83EX0
+2023/07/27 12:15:10 [info] 29100#35532: *27 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:16:14 [debug] 29100#35532: *31 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 12:16:14 [debug] 29100#35532: *31 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690452974}
+2023/07/27 12:16:14 [debug] 29100#35532: *31 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDUyOTc0fQ.RohEUi0SLdtsx3zJJqNnxoRCX_lhqe8LBZUOv-rzPsA
+2023/07/27 12:17:11 [debug] 29100#35532: *31 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:17:11 [debug] 29100#35532: *31 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690453031}
+2023/07/27 12:17:11 [debug] 29100#35532: *31 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUzMDMxfQ.F5Nw8yuDHsMEO_h-8VDs9FgVN1jqq9FfD1IxNpYC3SI
+2023/07/27 12:17:14 [info] 29100#35532: *36 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:29:06 [debug] 29100#35532: *41 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:29:06 [debug] 29100#35532: *41 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690453746}
+2023/07/27 12:29:06 [debug] 29100#35532: *41 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDUzNzQ2fQ.IG--WIeaCmMP84ziJCNHpIegJK4QPB8HrQ0-6JXULS0
+2023/07/27 12:30:01 [info] 29100#35532: *46 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:42:36 [debug] 29100#35532: *49 [lua] server.lua:121: generateToken(): User row: {"password":"666","user":6}
+2023/07/27 12:42:36 [debug] 29100#35532: *49 [lua] server.lua:129: generateToken(): Payload: {"sub":"6","exp":1690454556}
+2023/07/27 12:42:36 [debug] 29100#35532: *49 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2IiwiZXhwIjoxNjkwNDU0NTU2fQ.DpkekMesk4-cYvkOkT8mrFglsDV06NAFs8de6K9AvDM
+2023/07/27 12:43:36 [info] 29100#35532: *55 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:43:37 [info] 29100#35532: *56 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 12:45:03 [debug] 29100#35532: *58 [lua] server.lua:121: generateToken(): User row: {"password":"6","user":7}
+2023/07/27 12:45:03 [debug] 29100#35532: *58 [lua] server.lua:129: generateToken(): Payload: {"sub":"7","exp":1690454703}
+2023/07/27 12:45:03 [debug] 29100#35532: *58 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3IiwiZXhwIjoxNjkwNDU0NzAzfQ.-hsa8FV1krhsQhqL_oJgD_Oayf3b8P63Q5nc9KV-Psw
+2023/07/27 12:54:09 [debug] 29100#35532: *65 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:54:09 [debug] 29100#35532: *65 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690455249}
+2023/07/27 12:54:09 [debug] 29100#35532: *65 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDU1MjQ5fQ.nF8jg-rGZXWp6PMbVHYpV0XlpR7ZC8SAXoqjo0uZ6E8
+2023/07/27 12:54:24 [debug] 29100#35532: *66 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 12:54:24 [debug] 29100#35532: *66 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690455264}
+2023/07/27 12:54:24 [debug] 29100#35532: *66 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDU1MjY0fQ.ls_ldKhKP7hdwJFE2G9t7WO3BMk00WBKdaL3J_aDymk
+2023/07/27 12:55:09 [info] 29100#35532: *69 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:01:30 [debug] 29100#35532: *74 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 13:01:30 [debug] 29100#35532: *74 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690455690}
+2023/07/27 13:01:30 [debug] 29100#35532: *74 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDU1NjkwfQ.AX5gZPK2eRR0xAV3giWc3shHgOL5PI68HFG-Pqn0MyI
+2023/07/27 13:02:31 [info] 29100#35532: *79 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:15:50 [debug] 29100#35532: *80 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 13:15:50 [debug] 29100#35532: *80 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690456550}
+2023/07/27 13:15:50 [debug] 29100#35532: *80 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDU2NTUwfQ.YB4p1GGTxsUh7rkVdEW5vLOrTpSu9JsR8_gkYJN7-Uo
+2023/07/27 13:15:57 [debug] 29100#35532: *80 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 13:15:57 [debug] 29100#35532: *80 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690456557}
+2023/07/27 13:15:57 [debug] 29100#35532: *80 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDU2NTU3fQ.CxHDaG1QuEPDjLPXPqHXov5s8msA-HIBFW-I1zRAT14
+2023/07/27 13:16:50 [info] 29100#35532: *85 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:17:51 [notice] 26668#33192: signal process started
+2023/07/27 13:18:06 [debug] 24676#28912: *1 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/27 13:18:06 [debug] 24676#28912: *1 [lua] server.lua:129: generateToken(): Payload: {"sub":"2","exp":1690456686}
+2023/07/27 13:18:06 [debug] 24676#28912: *1 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwNDU2Njg2fQ.fqDtAKQhwCEUC0z7ypTAa8OYZ114QPv954oOjnWYYQU
+2023/07/27 13:19:06 [info] 24676#28912: *5 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:23:16 [debug] 24676#28912: *7 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 13:23:16 [debug] 24676#28912: *7 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690456996}
+2023/07/27 13:23:16 [debug] 24676#28912: *7 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDU2OTk2fQ.RIwrr0PzZY9Dd1DmH-0GPdyzA6xz9ElbyGoRJpMJ574
+2023/07/27 13:24:14 [info] 24676#28912: *10 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:35:00 [debug] 24676#28912: *13 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":3}
+2023/07/27 13:35:00 [debug] 24676#28912: *13 [lua] server.lua:129: generateToken(): Payload: {"sub":"3","exp":1690457700}
+2023/07/27 13:35:00 [debug] 24676#28912: *13 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNjkwNDU3NzAwfQ.y4O51K30zvcg0vygZmxBiHE3M5g-tPl3554ToDu4c9A
+2023/07/27 13:35:19 [error] 24676#28912: *15 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't h8', 0, 3)' at line 1, errno: 1064, sqlstate: 42000, Query: INSERT INTO TASKS (title, description, completed, user) VALUES ('Gr8 B8', 'W8 K8 don't h8', 0, 3), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 13:35:30 [error] 24676#28912: *15 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't h8', 0, 3)' at line 1, errno: 1064, sqlstate: 42000, Query: INSERT INTO TASKS (title, description, completed, user) VALUES ('Gr8 B8', 'W8 K8 don't h8', 0, 3), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 13:36:00 [info] 24676#28912: *17 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:36:35 [debug] 24676#28912: *15 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":3}
+2023/07/27 13:36:35 [debug] 24676#28912: *15 [lua] server.lua:129: generateToken(): Payload: {"sub":"3","exp":1690457795}
+2023/07/27 13:36:35 [debug] 24676#28912: *15 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNjkwNDU3Nzk1fQ.8jU7bY94gE6EObI4luvkDsv-7209S6ByJbpzIMarTso
+2023/07/27 13:36:43 [error] 24676#28912: *15 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't h8', 0, 3)' at line 1, errno: 1064, sqlstate: 42000, Query: INSERT INTO TASKS (title, description, completed, user) VALUES ('Gr8 B8', 'W8 K8 don't h8', 0, 3), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 13:37:35 [info] 24676#28912: *23 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:39:17 [info] 24676#28912: *27 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 13:41:16 [debug] 24676#28912: *31 [lua] server.lua:179: checkUserId(): Task User ID: 2
+2023/07/27 13:41:16 [debug] 24676#28912: *31 [lua] server.lua:180: checkUserId(): Authenticated User ID: 3
+2023/07/27 13:42:17 [info] 24676#28912: *34 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 14:05:11 [debug] 24676#28912: *35 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/27 14:05:11 [debug] 24676#28912: *35 [lua] server.lua:129: generateToken(): Payload: {"sub":"2","exp":1690459511}
+2023/07/27 14:05:11 [debug] 24676#28912: *35 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwNDU5NTExfQ.iz1_bXmqpQkPMcNrXJaIp4JmDtYuPBVndPKY86EtLss
+2023/07/27 14:05:21 [debug] 24676#28912: *35 [lua] server.lua:179: checkUserId(): Task User ID: 6
+2023/07/27 14:05:21 [debug] 24676#28912: *35 [lua] server.lua:180: checkUserId(): Authenticated User ID: 2
+2023/07/27 14:05:23 [debug] 24676#28912: *35 [lua] server.lua:179: checkUserId(): Task User ID: 6
+2023/07/27 14:05:23 [debug] 24676#28912: *35 [lua] server.lua:180: checkUserId(): Authenticated User ID: 2
+2023/07/27 14:06:09 [info] 24676#28912: *40 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:21:28 [debug] 24676#28912: *47 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/27 15:21:28 [debug] 24676#28912: *46 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 15:21:28 [debug] 24676#28912: *46 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690464088}
+2023/07/27 15:21:28 [debug] 24676#28912: *46 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDY0MDg4fQ.RirQAwspvJ0kEJ7aFP5a_jybYxDSTq_Zer5fWyHAq5A
+2023/07/27 15:22:14 [debug] 24676#28912: *46 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 15:22:14 [debug] 24676#28912: *46 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690464134}
+2023/07/27 15:22:14 [debug] 24676#28912: *46 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDY0MTM0fQ.eKNbqdF3rdFJmvjShBMsvexoawDNP6us91L4k2owYXA
+2023/07/27 15:22:20 [debug] 24676#28912: *47 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/27 15:22:20 [debug] 24676#28912: *47 [lua] server.lua:129: generateToken(): Payload: {"sub":"2","exp":1690464140}
+2023/07/27 15:22:20 [debug] 24676#28912: *47 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwNDY0MTQwfQ.0cWXfnRKpGg_qesWKntzpb3aLUg_qxgPfkz8EiBjFAQ
+2023/07/27 15:22:27 [debug] 24676#28912: *47 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":1}
+2023/07/27 15:22:27 [debug] 24676#28912: *47 [lua] server.lua:129: generateToken(): Payload: {"sub":"1","exp":1690464147}
+2023/07/27 15:22:27 [debug] 24676#28912: *47 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjkwNDY0MTQ3fQ.pcMTNue8R9L2yNFxMsma5PNcMAr1tlJlW4hpB8BKGjQ
+2023/07/27 15:22:28 [info] 24676#28912: *52 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:33:03 [debug] 24676#28912: *65 [lua] server.lua:179: checkUserId(): Task User ID: 3
+2023/07/27 15:33:03 [debug] 24676#28912: *65 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 15:33:06 [debug] 24676#28912: *65 [lua] server.lua:179: checkUserId(): Task User ID: 2
+2023/07/27 15:33:06 [debug] 24676#28912: *65 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 15:33:07 [debug] 24676#28912: *65 [lua] server.lua:179: checkUserId(): Task User ID: 2
+2023/07/27 15:33:07 [debug] 24676#28912: *65 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 15:33:08 [debug] 24676#28912: *65 [lua] server.lua:179: checkUserId(): Task User ID: 6
+2023/07/27 15:33:08 [debug] 24676#28912: *65 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 15:33:25 [debug] 24676#28912: *65 [lua] server.lua:179: checkUserId(): Task User ID: 3
+2023/07/27 15:33:25 [debug] 24676#28912: *65 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 15:34:04 [info] 24676#28912: *68 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:37:03 [debug] 24676#28912: *81 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 15:37:03 [debug] 24676#28912: *81 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690465023}
+2023/07/27 15:37:03 [debug] 24676#28912: *81 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDY1MDIzfQ.W4iAEGZZ7AcmUKLzpQveVMlxoZtdzJO4oBirMMLhxdQ
+2023/07/27 15:37:36 [debug] 24676#28912: *81 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/27 15:37:36 [debug] 24676#28912: *81 [lua] server.lua:129: generateToken(): Payload: {"sub":"2","exp":1690465056}
+2023/07/27 15:37:36 [debug] 24676#28912: *81 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwNDY1MDU2fQ.4738Rn-DVKzthHDxLs90EYR0DB6YAyszB645K-6TJ9Q
+2023/07/27 15:38:04 [info] 24676#28912: *85 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:39:27 [debug] 24676#28912: *88 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/27 15:39:27 [debug] 24676#28912: *88 [lua] server.lua:129: generateToken(): Payload: {"sub":"2","exp":1690465167}
+2023/07/27 15:39:27 [debug] 24676#28912: *88 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwNDY1MTY3fQ.SRqPDn8TsUty9SSkXMqcWn1DeR2U1cWUG3U5_ZtJvt4
+2023/07/27 15:40:27 [info] 24676#28912: *92 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:41:12 [debug] 24676#28912: *93 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":2}
+2023/07/27 15:41:12 [debug] 24676#28912: *93 [lua] server.lua:129: generateToken(): Payload: {"sub":"2","exp":1690465272}
+2023/07/27 15:41:12 [debug] 24676#28912: *93 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNjkwNDY1MjcyfQ.7jhzwQVZ62vq1I6v8UkZ1iVV1JJjjAgAskVsszFJ3rg
+2023/07/27 15:42:12 [info] 24676#28912: *98 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:44:47 [debug] 24676#28912: *99 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 15:44:47 [debug] 24676#28912: *99 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690465487}
+2023/07/27 15:44:47 [debug] 24676#28912: *99 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDY1NDg3fQ.3qVczlAtqSszN7z_eBMdPZO6xY8XkPoKf0bjlKuzvno
+2023/07/27 15:45:47 [info] 24676#28912: *104 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:47:15 [debug] 24676#28912: *105 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 15:47:15 [debug] 24676#28912: *105 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690465635}
+2023/07/27 15:47:15 [debug] 24676#28912: *105 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDY1NjM1fQ.gGoyY0cjvzNkNPPZK9uqH1jvdLhk13r3NrHtowLX8_w
+2023/07/27 15:47:24 [debug] 24676#28912: *105 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/27 15:47:37 [debug] 24676#28912: *105 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/27 15:47:39 [debug] 24676#28912: *105 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/27 15:47:42 [debug] 24676#28912: *105 [lua] server.lua:164: authenticateRequest(): Invalid JWT token or missing 'sub' claim
+2023/07/27 15:52:44 [debug] 24676#28912: *113 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":4}
+2023/07/27 15:52:44 [debug] 24676#28912: *113 [lua] server.lua:129: generateToken(): Payload: {"sub":"4","exp":1690465964}
+2023/07/27 15:52:44 [debug] 24676#28912: *113 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0IiwiZXhwIjoxNjkwNDY1OTY0fQ.a4yJQU7KD3ve7IB9C0323kIgHlvkSbKXO4H6p9Hmmcs
+2023/07/27 15:53:17 [debug] 24676#28912: *113 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":3}
+2023/07/27 15:53:17 [debug] 24676#28912: *113 [lua] server.lua:129: generateToken(): Payload: {"sub":"3","exp":1690465997}
+2023/07/27 15:53:17 [debug] 24676#28912: *113 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNjkwNDY1OTk3fQ.S-CPwPdpJiKqqg85YqkYTPsLF_dIUY2GeKOLd_7uTgA
+2023/07/27 15:53:26 [debug] 24676#28912: *114 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":3}
+2023/07/27 15:53:26 [debug] 24676#28912: *114 [lua] server.lua:129: generateToken(): Payload: {"sub":"3","exp":1690466006}
+2023/07/27 15:53:26 [debug] 24676#28912: *114 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNjkwNDY2MDA2fQ.90IbtKdyxZ47QMxHtTFdYvLnEHNxbbKSBzQMyiNfBwQ
+2023/07/27 15:53:44 [info] 24676#28912: *117 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 15:54:20 [debug] 24676#28912: *113 [lua] server.lua:121: generateToken(): User row: {"password":"1234","user":3}
+2023/07/27 15:54:20 [debug] 24676#28912: *113 [lua] server.lua:129: generateToken(): Payload: {"sub":"3","exp":1690466060}
+2023/07/27 15:54:20 [debug] 24676#28912: *113 [lua] server.lua:138: generateToken(): Generated Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNjkwNDY2MDYwfQ._GACwPX9L1djEv1I_I5DO8ZJePiptJZ8Zmj9yOGBVzA
+2023/07/27 15:54:39 [error] 24676#28912: *114 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's kill some', 0, 3)' at line 1, errno: 1064, sqlstate: 42000, Query: INSERT INTO TASKS (title, description, completed, user) VALUES ('i love bears', 'let's kill some', 0, 3), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 15:58:51 [notice] 12896#1436: signal process started
+2023/07/27 15:59:07 [error] 29992#28788: *3 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'let\'s go'', ''nope'', 0, 3)' at line 1, errno: 1064, sqlstate: 42000, Query: INSERT INTO TASKS (title, description, completed, user) VALUES (''let\'s go'', ''nope'', 0, 3), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 15:59:59 [info] 29992#28788: *5 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:04:03 [error] 29992#28788: *7 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\"wwea\'\"'', ''\"asdas\"'', 0, 4)' at line 1, errno: 1064, sqlstate: 42000, Query: INSERT INTO TASKS (title, description, completed, user) VALUES (''\"wwea\'\"'', ''\"asdas\"'', 0, 4), client: 127.0.0.1, server: , request: "POST /task HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 16:04:54 [info] 29992#28788: *11 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:14:04 [notice] 1300#19116: signal process started
+2023/07/27 16:14:26 [error] 37096#22292: *1 [lua] server.lua:35: executeQuery(): Failed to execute the query: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'd help m9', description = 'lol kiss my ass', completed = 1 WHERE id = 2' at line 1, errno: 1064, sqlstate: 42000, Query: UPDATE TASKS SET title = 'I nee'd help m9', description = 'lol kiss my ass', completed = 1 WHERE id = 2, client: 127.0.0.1, server: , request: "PUT /task/2 HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:3000/"
+2023/07/27 16:15:18 [info] 37096#22292: *5 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:17:23 [notice] 26116#27400: signal process started
+2023/07/27 16:18:39 [info] 20576#30948: *5 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:28:30 [notice] 24620#12120: signal process started
+2023/07/27 16:29:39 [info] 540#25692: *6 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:31:51 [info] 540#25692: *15 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:34:49 [info] 540#25692: *32 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:37:49 [info] 540#25692: *48 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:44:08 [info] 540#25692: *61 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 16:46:22 [info] 540#25692: *69 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:36:01 [info] 540#25692: *89 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:38:15 [info] 540#25692: *93 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:41:06 [info] 540#25692: *97 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:47:07 [info] 540#25692: *102 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:48:41 [info] 540#25692: *113 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:54:56 [info] 540#25692: *132 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 17:57:23 [info] 540#25692: *137 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:04:28 [info] 540#25692: *145 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:06:53 [info] 540#25692: *156 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:09:15 [info] 540#25692: *161 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:14:27 [info] 540#25692: *166 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:33:13 [info] 540#25692: *186 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:35:19 [info] 540#25692: *193 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:38:03 [info] 540#25692: *205 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:44:54 [info] 540#25692: *221 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:49:26 [info] 540#25692: *228 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:54:24 [debug] 540#25692: *229 [lua] server.lua:179: checkUserId(): Task User ID: 3
+2023/07/27 18:54:24 [debug] 540#25692: *229 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 18:54:25 [debug] 540#25692: *229 [lua] server.lua:179: checkUserId(): Task User ID: 3
+2023/07/27 18:54:25 [debug] 540#25692: *229 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 18:55:20 [debug] 540#25692: *229 [lua] server.lua:179: checkUserId(): Task User ID: 3
+2023/07/27 18:55:20 [debug] 540#25692: *229 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 18:55:20 [debug] 540#25692: *229 [lua] server.lua:179: checkUserId(): Task User ID: 3
+2023/07/27 18:55:20 [debug] 540#25692: *229 [lua] server.lua:180: checkUserId(): Authenticated User ID: 1
+2023/07/27 18:55:24 [info] 540#25692: *232 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 18:56:25 [info] 540#25692: *238 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:10:10 [info] 540#25692: *244 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:12:25 [info] 540#25692: *249 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:13:32 [info] 540#25692: *255 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:18:32 [info] 540#25692: *262 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:28:27 [info] 540#25692: *266 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:29:47 [info] 540#25692: *274 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2023/07/27 19:38:11 [notice] 35900#40376: signal process started

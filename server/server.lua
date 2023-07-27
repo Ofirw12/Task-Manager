@@ -118,7 +118,7 @@ local function generateToken(username)
 
     -- Assuming the user table contains an 'id' column (integer) and 'password' column (string)
     local user = userResult[1]
-    ngx.log(ngx.DEBUG, "User row: ", cjson.encode(user))
+    --ngx.log(ngx.DEBUG, "User row: ", cjson.encode(user))
 
     -- Create the payload for the JWT
     local payload = {
@@ -126,16 +126,16 @@ local function generateToken(username)
         exp = ngx.time() + 3600,
     }
 
-    ngx.log(ngx.DEBUG, "Payload: ", cjson.encode(payload)) -- Add this line for debugging
+    --ngx.log(ngx.DEBUG, "Payload: ", cjson.encode(payload)) -- Add this line for debugging
 
     -- Generate and return the JWT
     local token, err = jwt:sign(jwt_secret, { header = { typ = "JWT", alg = "HS256" }, payload = payload })
     if not token then
-        ngx.log(ngx.ERR, "Failed to generate JWT: ", err)
+        --ngx.log(ngx.ERR, "Failed to generate JWT: ", err)
         return nil
     end
 
-    ngx.log(ngx.DEBUG, "Generated Token: ", token)
+    --ngx.log(ngx.DEBUG, "Generated Token: ", token)
     return token
 end
 
@@ -187,6 +187,42 @@ local function checkUserId(userId, taskId)
     return true
 end
 
+
+local function set_cors_headers()
+    if ngx.req.get_method() == "OPTIONS" then
+        -- Respond to preflight requests
+        ngx.header["Access-Control-Allow-Origin"] = "http://localhost:3000"
+        ngx.header["Access-Control-Allow-Methods"] = "POST, GET, PUT, DELETE, OPTIONS"
+        ngx.header["Access-Control-Allow-Headers"] = "Authorization, Content-Type"
+        ngx.header["Access-Control-Allow-Credentials"] = "true"
+        ngx.header["Access-Control-Max-Age"] = "3600" -- Set cache time for preflight response
+        ngx.exit(ngx.HTTP_OK)
+    else
+        -- Add CORS headers to all other responses
+        ngx.header["Access-Control-Allow-Origin"] = "http://localhost:3000"
+        ngx.header["Access-Control-Allow-Credentials"] = "true"
+    end
+end
+set_cors_headers()
+
+
+local function addBackslashes(inputString)
+    -- Replace backslashes with double backslashes to escape them
+    inputString = inputString:gsub("\\", "\\\\")
+
+    -- Replace single quotes with escaped single quotes
+    inputString = inputString:gsub("'", "\\'")
+
+    -- Replace double quotes with escaped double quotes
+    inputString = inputString:gsub('"', '\\"')
+
+    -- Add more replacement patterns if needed for other characters
+
+    return inputString
+end
+
+
+
 r:post("/users", function(params)
     -- Parse and validate JSON data for user creation
     local json_data, err = parseJSON(nil, { "user", "password" })
@@ -212,7 +248,7 @@ r:post("/users", function(params)
     end
 
     if result.affected_rows and result.affected_rows > 0 then
-        returnJSON({ result = "success" })
+        returnJSON({ result = "User signed up successfully" })
     else
         returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to insert task into the database")
     end
@@ -230,8 +266,8 @@ r:post("/task", function(params)
         return
     end
 
-    local title = json_data["title"]
-    local description = json_data["description"]
+    local title = addBackslashes(json_data["title"])
+    local description = addBackslashes(json_data["description"])
     local completed = tonumber(json_data["completed"])
 
     -- Check if all required task data is provided
@@ -256,8 +292,12 @@ r:post("/task", function(params)
         end
         return
     end
-
-    returnJSON({ result = "success" })
+    local lastInsertedId = result.insert_id
+    if not lastInsertedId then
+        returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to get the ID of the last inserted row")
+        return
+    else returnJSON({id = lastInsertedId, result = "Task added successfully"})
+    end
 end)
 
 r:get("/tasks", function(params)
@@ -345,10 +385,10 @@ r:put("/task/:id", function(params)
         -- Check if the JSON data contains any fields to update
         local fieldsToUpdate = {}
         if json_data.title then
-            table.insert(fieldsToUpdate, string.format("title = '%s'", json_data.title))
+            table.insert(fieldsToUpdate, string.format("title = '%s'", addBackslashes(json_data.title)))
         end
         if json_data.description then
-            table.insert(fieldsToUpdate, string.format("description = '%s'", json_data.description))
+            table.insert(fieldsToUpdate, string.format("description = '%s'", addBackslashes(json_data.description)))
         end
         if json_data.completed ~= nil then
             local completedValue = json_data.completed and 1 or 0
@@ -374,7 +414,7 @@ r:put("/task/:id", function(params)
         end
 
         if result.affected_rows and result.affected_rows > 0 then
-            returnJSON({ result = "success" })
+            returnJSON({ result = "Task updated successfully" })
         else
             returnError(ngx.HTTP_NOT_FOUND, "Task not found or Failed to update task in the database")
         end
@@ -398,7 +438,7 @@ r:delete("/task/:id", function(params)
 
         -- Check if the delete operation was successful
         if result.affected_rows and result.affected_rows > 0 then
-            returnJSON({ result = "success" })
+            returnJSON({ result = "Task deleted successfully" })
         else
             returnError(ngx.HTTP_NOT_FOUND, "Task not found")
         end
@@ -441,8 +481,10 @@ r:post("/auth", function(params)
         returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to generate JWT")
     end
 end)
+r:options(".*", function()
+    set_cors_headers()
+end)
 
--- Start the server
 if not r:execute(ngx.req.get_method(), ngx.var.uri) then
     -- Return a 404 Not Found response if no route matches the requests
     returnError(ngx.HTTP_NOT_FOUND, "Not found")

@@ -13,27 +13,14 @@ import Zoom from '@mui/material/Zoom';
 function AddTask() {
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         store.addTask();
-        store.addMode = false;
+        store.setAddMode(false);
         e.preventDefault();
     }
     return <div>
-        {/* <form action="" onSubmit={handleSubmit}>
-            <TextField fullWidth margin="normal" label="Add a new task" id="fullWidth"
-                value={store.newTitle}
-                onChange={(e) => (store.newTitle = e.target.value)}
-            />
-            <TextField fullWidth margin="normal" label="Add a new description" id="fullWidth"
-                value={store.newDesc}
-                onChange={(e) => (store.newDesc = e.target.value)}
-            />
-            <Fab color='warning' aria-label="add" type="submit" size="small">
-                <AddIcon />
-            </Fab>
-        </form> */}
         <Box
             sx={store.addMode ? {
                 width: 700,
-                height: 200,
+                height: 210,
                 backgroundColor: 'grey.200',
                 textAlign: 'center',
                 borderRadius: '7px',
@@ -47,29 +34,27 @@ function AddTask() {
                 boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.3)',
             }}
             margin="30px auto 20px auto">
-            <form action="" onSubmit={handleSubmit}>
+            <form action="" onSubmit={handleSubmit} >
                 <TextField margin="normal" label="Add a new task"
                     sx={{ backgroundColor: 'grey.100', width: 400 }}
                     value={store.newTitle}
-                    onChange={(e) => (store.newTitle = e.target.value)}
-                    onClick={() => (store.addMode = true)}
+                    onChange={(e) => (store.setNewTitle(e.target.value))}
+                    onClick={() => (store.setAddMode(true))}
                 />
                 <Zoom in={store.addMode}>
-                    <div>
+                    <div >
                         <TextField margin="normal" label="Add a new description"
                             sx={{ backgroundColor: 'grey.100', width: 600 }}
                             value={store.newDesc}
-                            onChange={(e) => (store.newDesc = e.target.value)}
+                            onChange={(e) => (store.setNewDesc(e.target.value))}
                         />
-                        <Grid item xs={2}>
+                        <Grid item xs={2} sx={{marginLeft:'40%', marginBottom:'20%'}}>
                             <Fab disabled={store.newDesc === "" || store.newTitle === ""} color='warning' aria-label="add" type="submit" size="small">
                                 <AddIcon />
                             </Fab>
                         </Grid>
                     </div>
                 </Zoom>
-
-
             </form>
         </Box>
     </div>
