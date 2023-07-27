@@ -1,6 +1,3 @@
-Sure! Here's the content you can directly copy and paste into your README.md file:
-
-```
 # Task Manager
 
 Task Manager is a simple web application built with React, MobX, and TypeScript on the frontend, and a RESTful server built using OpenResty with Lua, using a local MySQL database.
@@ -20,19 +17,19 @@ Before running the Task Manager app, make sure you have the following installed:
 2. Open your CLI (Command Line Interface) and navigate to the local folder of the project.
 
 3. Navigate to the `/server` directory and run the following command to start the OpenResty server:
-
-   ```
+   ```bash
+   cd /server
    nginx
    ```
-
    This will start the RESTful server.
 
 4. Open another CLI tab, navigate to the `/client` directory, and run the following command to start the React app:
 
-   ```
+   ```bash
+   cd /client
    npm start
    ```
-
+   
    The Task Manager app will open in your default web browser.
 
 5. On first use, you need to register a user with `id=1` and set a password of your choice (this will be the admin user).
@@ -49,46 +46,32 @@ Before running the Task Manager app, make sure you have the following installed:
 ## Technologies Used
 
 - Frontend:
-  - React
-  - MobX (for state management)
-  - TypeScript (for type-checking and static analysis)
-  - Material-UI (for UI components)
+- React
+- MobX (for state management)
+- TypeScript (for type-checking and static analysis)
+- Material-UI (for UI components)
 
 - Backend:
-  - OpenResty (for server-side processing)
-  - Lua (for scripting)
-  - MySQL (for database management)
+- OpenResty (for server-side processing)
+- Lua (for scripting)
+- MySQL (for database management)
 
 ## Folder Structure
 
-```
 task-manager/
-  ├── client/
-  |   ├── public/
-  |   |   ├── index.html
-  |   ├── src/
-  |   |   ├── components/
-  |   |   ├── stores/
-  |   |   ├── services/
-  |   |   ├── App.tsx
-  |   ├── package.json
-  |   ├── tsconfig.json
-  ├── server/
-  |   ├── conf/
-  |   |   ├── nginx.conf
-  |   |   ├── mime.types
-  |   |   ├── lua/
-  |   |   |   ├── auth.lua
-  |   |   |   ├── router.lua
-  |   ├── logs/
-  |   ├── data/
-  |   |   ├── tasks.sql
-  |   |   ├── users.sql
-  |   ├── lua/
-  |   |   ├── server.lua
-  ├── README.md
-  ├── .gitignore
-```
+├── client/
+| ├── public/
+| | ├── index.html
+| ├── src/
+| | ├── components/
+| ├── package.json
+| ├── tsconfig.json
+├── server/
+| ├── conf/
+| | ├── nginx.conf
+| ├── server.lua
+├── README.md
+├── .gitignore
 
 ## Getting Help or Contributing
 
@@ -96,7 +79,4 @@ If you encounter any issues while using the Task Manager app or have ideas for i
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for personal or commercial use.
-```
-
-Please note that the file structure part (`Folder Structure`) may not format correctly if you're pasting it directly into the README.md file on some platforms like GitHub. Make sure to check if it renders properly and adjust the indentation if needed.
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code for personal or commercial use.
