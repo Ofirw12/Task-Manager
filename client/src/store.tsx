@@ -79,6 +79,7 @@ class Tasks {
   }
   setTaskUpdatedTitle(task: Task, value: string) {
     runInAction(() => task.updatedTitle = value);
+    
   }
   setTaskUpdatedDescription(task: Task, value: string) {
     runInAction(() => task.updatedDescription = value);

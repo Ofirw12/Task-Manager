@@ -10,7 +10,6 @@ import {Md5}  from 'ts-md5';
 
 function LoginArea() {
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        console.log(Md5.hashStr(store.UserPassword));
         store.login(parseInt(store.UserId), Md5.hashStr(store.UserPassword));
         e.preventDefault();
     }

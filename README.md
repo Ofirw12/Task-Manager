@@ -85,7 +85,7 @@ Before running the Task Manager app, make sure you have the following installed:
 - MySQL (for database management)
 
 ## Folder Structure
-
+```
 task-manager/
 ├── client/
 | ├── public/
@@ -100,7 +100,7 @@ task-manager/
 | ├── server.lua
 ├── README.md
 ├── .gitignore
-
+```
 ## Getting Help or Contributing
 
 If you encounter any issues while using the Task Manager app or have ideas for improvements, feel free to create an issue on the GitHub repository. Contributions are always welcome!

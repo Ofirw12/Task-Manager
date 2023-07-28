@@ -36,6 +36,18 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
             store.setTaskUpdatedDescription(item, item.description);
         }
     };
+    const doCheck = (): boolean | undefined => {
+        console.log('localStorage["userId"]: ', localStorage["userId"]);
+        console.log('item.user: ', item.user);
+        console.log('typeof localStorage["userId"]: ', typeof localStorage["userId"]);
+        console.log('typeof item.user: ', typeof item.user);
+        console.log('parseInt(localStorage["userId"]): ', parseInt(localStorage["userId"]));
+        console.log('typeof parseInt(localStorage["userId"]: ', typeof parseInt(localStorage["userId"]));
+        console.log(localStorage["userId"] === item.user);
+        console.log(parseInt(localStorage["userId"]) === item.user);
+
+        return parseInt(localStorage["userId"]) !== item.user;
+    }
 
     return (
         <div key={item.id}>
@@ -73,7 +85,6 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
             ) : (
                 <div>
                     <Zoom in={!item.editMode}>
-                        {/* try to make accordion thicker */}
                         <Accordion sx={{ backgroundColor: 'grey.300' }}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
@@ -84,10 +95,12 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                                     <Checkbox
                                         checked={item.completed}
                                         disabled={parseInt(localStorage["userId"]) !== item.user}
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            store.setTaskCompleted(item, !item.completed);
-                                        }}
+                                        onClick={
+                                            (e) => {
+                                                e.stopPropagation();
+                                                store.setTaskCompleted(item, !item.completed);
+                                            }
+                                        }
                                         sx={{ marginTop: '50%', marginLeft: '50%' }}
                                     />
                                 </Grid>
