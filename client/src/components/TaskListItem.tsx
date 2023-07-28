@@ -83,7 +83,7 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                                 <Grid item xs={8}>
                                     <Checkbox
                                         checked={item.completed}
-                                        disabled={store.UserId === '1'}
+                                        disabled={parseInt(localStorage["userId"]) !== item.user}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             store.setTaskCompleted(item, !item.completed);
@@ -102,14 +102,14 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                                     {item.description}
                                 </Typography>
                                 <Fab color="warning" size="small" aria-label="edit"
-                                    onClick={handleClick} disabled={store.UserId === '1'}
+                                    onClick={handleClick} disabled={parseInt(localStorage["userId"]) !== item.user}
                                     sx={{ mr: 1 }}>
                                     <EditIcon />
                                 </Fab>
-                                <Fab color="warning" size="small" aria-label="edit"
+                                <Fab color="warning" size="small" aria-label="delete"
                                     onClick={() => store.removeTask(item.id)}
                                     sx={{ mr: 1 }}
-                                    disabled={store.UserId === '1'}
+                                    disabled={parseInt(localStorage["userId"]) !== item.user}
                                 >
                                     <DeleteIcon />
                                 </Fab>

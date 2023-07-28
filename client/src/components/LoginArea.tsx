@@ -6,14 +6,17 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Grid from "@mui/material/Grid";
 import { observer } from "mobx-react";
+import {Md5}  from 'ts-md5';
 
 function LoginArea() {
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        store.login(parseInt(store.UserId), store.UserPassword);
+        console.log(Md5.hashStr(store.UserPassword));
+        store.login(parseInt(store.UserId), Md5.hashStr(store.UserPassword));
         e.preventDefault();
     }
     function handleClick(){
-        store.signup(parseInt(store.UserId), store.UserPassword);
+        console.log(Md5.hashStr(store.UserPassword));
+        store.signup(parseInt(store.UserId), Md5.hashStr(store.UserPassword));
     }
     return <Box
         sx={{

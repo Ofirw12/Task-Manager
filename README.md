@@ -16,25 +16,53 @@ Before running the Task Manager app, make sure you have the following installed:
 
 2. Open your CLI (Command Line Interface) and navigate to the local folder of the project.
 
-3. Navigate to the `/server` directory and run the following command to start the OpenResty server:
+3. Navigate to the `/server` directory and open the `server.lua` file in a text editor.
    ```bash
    cd /server
+   code . (if you\'re using Visual Studio Code)
+   ```
+
+4. Inside the `server.lua` file, locate the following lines:
+
+   ``` lua
+   db:set_timeout(5000)
+
+   local ok, err, errno, sqlstate = db:connect({
+       host = "127.0.0.1",
+       port = 3306,
+       database = "tasks",
+       user = "root",
+       password = "root"
+   })
+   ```
+   Replace the values within the connect function with your actual MySQL database details:
+      host: Replace "127.0.0.1" with your local MySQL server IP address.
+      port: Replace 3306 with your local MySQL server port (default is 3306).
+      database: Replace "tasks" with the name of your MySQL database.
+      user: Replace "root" with your MySQL database user.
+      password: Replace "root" with your MySQL database password.
+
+   Save the changes to the server.lua file.
+
+5. Now, in the same CLI tab, run the following command to start the OpenResty server:
+   ```
    nginx
    ```
-   This will start the RESTful server.
+   This will start the RESTful server with your updated MySQL database details.
 
-4. Open another CLI tab, navigate to the `/client` directory, and run the following command to start the React app:
+6. Open another CLI tab, navigate to the `/client` directory, and run the following command to start the React app:
 
    ```bash
    cd /client
+   npm install (first time only)
    npm start
    ```
    
    The Task Manager app will open in your default web browser.
 
-5. On first use, you need to register a user with `id=1` and set a password of your choice (this will be the admin user).
+7. On first use, you need to register a user with `id=1` and set a password of your choice (this will be the admin user).
 
-6. Log in using the credentials you registered and start managing your tasks.
+8. Log in using the credentials you registered with and start managing your tasks.
 
 ## Features
 

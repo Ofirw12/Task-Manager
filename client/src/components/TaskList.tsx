@@ -7,6 +7,10 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
 function TaskList() {
@@ -17,18 +21,35 @@ function TaskList() {
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
+    const handleChange = (event: SelectChangeEvent) => {
+        store.setFilterMode(event.target.value as string);
+        //store.filter(event.target.value as string);
+      };
 
     return (
         <div >
             <Box sx={{ flexGrow: 1, }}>
                 <Grid sx={{ backgroundColor: 'grey.100' }}>
                     <Grid container spacing={1}>
-                        <Grid item xs={4} sx={{ marginLeft: '2%' }}>
-                            {store.UserId !== "" && <Typography variant='subtitle2'>Hint: Mark the checkbox when the task is done</Typography>}
-                            
-                        </Grid>
+                        <Box sx={{ minWidth: 120 , }}>
+                            <FormControl fullWidth sx={{marginLeft: "10%"}}>
+                                <InputLabel id="demo-simple-select-label">Filter by:</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-label"
+                                    id="demo-simple-select"
+                                    value={store.filterMode}
+                                    label="Filter by:"
+                                    onChange={handleChange}
+                                >
+                                    <MenuItem value={"All"}>All</MenuItem>
+                                    <MenuItem value={"Completed"}>Completed</MenuItem>
+                                    <MenuItem value={"Incomplete"}>Incomplete</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Box>
                     </Grid>
-                    {store.tasks.map(
+
+                    {store.setFilterMode(store.filterMode).map(
                         (task) =>
                             <Item sx={{ backgroundColor: 'grey.100' }} key={task.id}>
                                 <TaskListItem

@@ -19,7 +19,7 @@ function App() {
         <div>
       <Grid container spacing={2} sx={{marginBottom:'2%'}}>
         <Grid item xs={3}>
-        {store.UserId !== '1' && <TaskSummarizer />}
+        {parseInt(localStorage["userId"]) !== 1 && <TaskSummarizer />}
         </Grid>
         <Grid item xs={6}>
         <AddTask />

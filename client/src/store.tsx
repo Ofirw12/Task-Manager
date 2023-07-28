@@ -5,6 +5,7 @@ export interface Task {
   title: string;
   description: string;
   completed: boolean;
+  user: number;
   editMode: boolean;
   updatedTitle: string;
   updatedDescription: string;
@@ -21,6 +22,7 @@ const addTask = (tasks: Task[], title: string, description: string, id: number):
     id: id,
     title: title,
     description: description,
+    user: localStorage["userId"],
     completed: false,
     editMode: false,
     updatedTitle: "",
@@ -38,8 +40,7 @@ class Tasks {
   UserId: string = "";
   UserPassword: string = "";
   serverResponse: string = "";
-  //updatedTitle: string = "";
-  //updatedDescription:string =  "";
+  filterMode: string = "All";
 
   constructor() {
     makeAutoObservable(this);
@@ -94,6 +95,25 @@ class Tasks {
   setTaskCompleted(task: Task, value: boolean) {
     runInAction(() => task.completed = value);
     this.updateTask(task.id);
+  }
+  setFilterMode(value: string) : Task[]{
+    if(value === "All"){
+      runInAction(() => this.filterMode="All");
+      return this.tasks;
+    }
+    else if (value  === "Completed"){
+      runInAction(() => this.filterMode="Completed");
+      return this.tasks.filter((task) => task.completed===true);
+    }
+    else if (value === "Incomplete"){
+      runInAction(() => this.filterMode="Incomplete");
+      return this.tasks.filter((task) => task.completed===false);
+    }
+    else{
+      return [];
+    }
+
+
   }
 
 
@@ -177,7 +197,7 @@ class Tasks {
 
   async load() {
     try {
-      this.setTasks(await requestHandler.getAllUserTasks(parseInt(store.UserId)));
+      this.setTasks(await requestHandler.getAllUserTasks(localStorage["userId"]));
     } catch (error) {
       console.error("Error while loading tasks:", error);
     }
@@ -192,9 +212,11 @@ class Tasks {
 
   async login(id: number, password: string) {
     try {
-      this.UserPassword = "";
+      localStorage["userId"]=store.UserId;
+      store.setUserPassword("");
+      store.setUserId("");
       requestHandler.authenticate(id, password);
-      if (store.UserId === "1") {
+      if (parseInt(localStorage["userId"]) === 1) {
         this.adminLoad();
       }
       else this.load();

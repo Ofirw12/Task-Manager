@@ -25,6 +25,7 @@ function handleJSONTasks(response: ServerTaskData[]): Task[]{
       title: item.title,
       description: item.description,
       completed: item.completed === 1 ? true : false,
+      user: item.user,
       editMode: false,
       updatedTitle: "",
       updatedDescription: "",
@@ -32,20 +33,6 @@ function handleJSONTasks(response: ServerTaskData[]): Task[]{
     return tasks;
   }
 
-function removeBackslashes(inputString: string) {
-    // Replace escaped double quotes with double quotes
-    inputString = inputString.replace(/\\"/g, '"');
-  
-    // Replace escaped single quotes with single quotes
-    inputString = inputString.replace(/\\'/g, "'");
-  
-    // Replace double backslashes with single backslashes
-    inputString = inputString.replace(/\\\\/g, '\\');
-  
-    // Add more replacement patterns if needed for other characters
-  
-    return inputString;
-  }
   
 
 //HTTP Request handlers
