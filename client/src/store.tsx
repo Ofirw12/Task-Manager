@@ -20,7 +20,7 @@ const addTask = (tasks: Task[], title: string, description: string, id: number):
     id: id,
     title: title,
     description: description,
-    user: localStorage["userId"],
+    user: parseInt(localStorage["userId"]),
     completed: false,
     editMode: false,
     updatedTitle: "",
@@ -130,7 +130,6 @@ class Tasks {
     try {
       const taskId = await requestHandler.addTask(this.newTitle, this.newDesc, 0);
       this.setTasks(addTask(this.tasks, this.newTitle, this.newDesc, taskId));
-      console.log(this.tasks.find((task) => task.id=taskId));
       this.setNewTitle("");
       this.setNewDesc("");
     }

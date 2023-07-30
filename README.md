@@ -64,6 +64,15 @@ Before running the Task Manager app, make sure you have the following installed:
 
 8. Log in using the credentials you registered with and start managing your tasks.
 
+9. To stop the server, open a new CLI tab, navigate to the /server directory, and run:
+   ```bash
+   nginx -s stop
+   ```
+
+   9.1. To stop the client, go to the previous CLI window and press `Ctrl+C`.
+
+
+
 ## Features
 
 - View and manage your tasks.
