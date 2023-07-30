@@ -6,6 +6,8 @@ interface ServerTaskData {
     id: number;
     title: string;
     description: string;
+    status: string;
+    priority: string;
     completed: number;
     user: number;
   }
@@ -24,11 +26,14 @@ function handleJSONTasks(response: ServerTaskData[]): Task[]{
       id: item.id,
       title: item.title,
       description: item.description,
+      status: item.status,
+      priority: item.priority,
       completed: item.completed === 1 ? true : false,
       user: item.user,
       editMode: false,
       updatedTitle: "",
       updatedDescription: "",
+      isNew: false,
     }));
     return tasks;
   }
@@ -45,6 +50,7 @@ export function authenticate(user: number, password: string) {
             localStorage["token"] = response.data.token;
             if (localStorage["token"])
                 store.setLogedIn(true);
+                
         })
         .catch(function (error) {
             if (error.response && error.response.data) {
@@ -70,7 +76,7 @@ export function addUser(user: number, password: string): Promise<boolean> {
         return Promise.reject(error);
     })
 }
-export function addTask(title: string, description: string, completed: number): Promise<number> {
+export function addTask(title: string, description: string, status: string, priority: string, completed: number): Promise<number> {
     return axios.post(serverIP + "/task", {
         title: title,
         description: description,

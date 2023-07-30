@@ -43,17 +43,19 @@ end
 -- Create the tables if they don't exist
 local createUsers = [[
     CREATE TABLE IF NOT EXISTS USERS(
-        user INTEGER PRIMARY KEY NOT NULL,
+        user INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
         password TEXT NOT NULL
     )
 ]]
 
 local createTasks = [[
     CREATE TABLE IF NOT EXISTS TASKS(
-        id INTEGER PRIMARY KEY AUTO_INCREMENT,
+        id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
         title TEXT NOT NULL,
         description TEXT NOT NULL,
         completed INTEGER NOT NULL,
+        priority TEXT NOT NULL,
+        status TEXT NOT NULL,
         user INTEGER NOT NULL,
         CONSTRAINT FK_Tasks FOREIGN KEY (user) REFERENCES USERS(user)
     )
@@ -164,7 +166,7 @@ local function authenticateRequest()
         ngx.log(ngx.DEBUG, "Invalid JWT token or missing 'sub' claim")
         return nil
     end
--- Extract and return the authenticated user ID (sub) from the JWT payload
+    -- Extract and return the authenticated user ID (sub) from the JWT payload
     return tonumber(verified_data.payload.sub)
 end
 
@@ -260,7 +262,7 @@ r:post("/task", function(params)
         return
     end
     -- Parse and validate JSON data for task creation
-    local json_data, err = parseJSON(nil, {"title", "description", "completed"})
+    local json_data, err = parseJSON(nil, { "title", "description", "completed", "status", "priority" })
     if not json_data then
         returnError(ngx.HTTP_BAD_REQUEST, err)
         return
@@ -269,18 +271,18 @@ r:post("/task", function(params)
     local title = addBackslashes(json_data["title"])
     local description = addBackslashes(json_data["description"])
     local completed = tonumber(json_data["completed"])
+    local status = addBackslashes(json_data["status"])
+    local priority = addBackslashes(json_data["priority"])
 
     -- Check if all required task data is provided
     if not title or not description or not completed then
         returnError(ngx.HTTP_BAD_REQUEST,
-            "All 'title', 'description', and 'completed' values are required in the JSON data")
+            "All 'title', 'description','completed', 'status' and 'priority' values are required in the JSON data")
         return
     end
-
-    -- Insert the new task into the database
     local query = string.format(
-        "INSERT INTO TASKS (title, description, completed, user) VALUES ('%s', '%s', %d, %d)",
-        title, description, completed, userId)
+        "INSERT INTO TASKS (title, description, completed, priority, status, user) VALUES ('%s', '%s', %d, '%s', '%s', %d)",
+        title, description, completed, priority, status, userId)
     local result, err = executeQuery(query)
 
     if not result then
@@ -296,7 +298,8 @@ r:post("/task", function(params)
     if not lastInsertedId then
         returnError(ngx.HTTP_INTERNAL_SERVER_ERROR, "Failed to get the ID of the last inserted row")
         return
-    else returnJSON({id = lastInsertedId, result = "Task added successfully"})
+    else
+        returnJSON({ id = lastInsertedId, result = "Task added successfully" })
     end
 end)
 

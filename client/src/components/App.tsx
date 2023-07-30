@@ -9,7 +9,7 @@ import store from "../store";
 import { observer } from "mobx-react";
 import Snackbar from '@mui/material/Snackbar';
 import Grid from '@mui/material/Grid';
-//git push origin master
+import TaskDataGrid from "./TaskDataGrid";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <AddTask />
         </Grid>
       </Grid>
+      <TaskDataGrid></TaskDataGrid>
           <TaskList />
         </div>
         :

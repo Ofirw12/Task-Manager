@@ -4,11 +4,14 @@ export interface Task {
   id: number;
   title: string;
   description: string;
+  status: string;
+  priority: string;
   completed: boolean;
   user: number;
   editMode: boolean;
   updatedTitle: string;
   updatedDescription: string;
+  isNew: boolean;
 }
 
 //create read update delete with backend implementation
@@ -16,17 +19,20 @@ export interface Task {
 const removeTask = (tasks: Task[], id: number): Task[] =>
   tasks.filter((task) => task.id !== id);
 
-const addTask = (tasks: Task[], title: string, description: string, id: number): Task[] => [
+const addTask = (tasks: Task[], title: string, description: string, id: number, status: string, priority: string): Task[] => [
   ...tasks,
   {
     id: id,
     title: title,
     description: description,
+    status: status,
+    priority: priority,
     user: localStorage["userId"],
     completed: false,
     editMode: false,
     updatedTitle: "",
     updatedDescription: "",
+    isNew: true,
   },
 ];
 
@@ -35,6 +41,8 @@ class Tasks {
   tasks: Task[] = [];
   newTitle: string = "";
   newDesc: string = "";
+  newStatus: string = "";
+  newPriority: string ="";
   addMode: boolean = false;
   logedIn: boolean = false;
   UserId: string = "";
@@ -117,7 +125,6 @@ class Tasks {
 
   }
 
-
   async removeTask(id: number) {
     try {
       requestHandler.deleteTask(id);
@@ -130,8 +137,8 @@ class Tasks {
 
   async addTask() {
     try {
-      const taskId = await requestHandler.addTask(this.newTitle, this.newDesc, 0);
-      this.setTasks(addTask(this.tasks, this.newTitle, this.newDesc, taskId));
+      const taskId = await requestHandler.addTask(this.newTitle, this.newDesc, this.newPriority, this.newStatus,0);
+      this.setTasks(addTask(this.tasks, this.newTitle, this.newDesc, taskId, this.newStatus, this.newPriority));
       this.setNewTitle("");
       this.setNewDesc("");
     }
