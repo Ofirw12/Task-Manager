@@ -14,7 +14,6 @@ function LoginArea() {
         e.preventDefault();
     }
     function handleClick(){
-        console.log(Md5.hashStr(store.UserPassword));
         store.signup(parseInt(store.UserId), Md5.hashStr(store.UserPassword));
     }
     return <Box

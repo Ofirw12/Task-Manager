@@ -1,7 +1,5 @@
 import React from "react";
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
-
-
 function Header() {
     return <div>
         <header>

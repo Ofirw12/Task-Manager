@@ -96,7 +96,6 @@ export function updateTask(task: Task) {
         }, getAuthenticationHeader())
         .then(function (response) {
             store.setServerResponse(response.data.result);
-    
         })
         .catch(function (error) {
             if (error.response && error.response.data) {

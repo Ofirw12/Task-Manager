@@ -4,8 +4,8 @@ local mysql = require("resty.mysql")
 local router = require("router")
 local jwt = require("resty.jwt")
 local r = router.new()
+local jwt_secret = "secretKey"
 
-local jwt_secret = "secretKey" --update later
 -- Initialize the MySQL database connection
 local db, err = mysql:new()
 if not db then
@@ -115,10 +115,8 @@ local function generateToken(username)
         ngx.log(ngx.ERR, "User not found")
         return nil
     end
-
     -- Assuming the user table contains an 'id' column (integer) and 'password' column (string)
     local user = userResult[1]
-    --ngx.log(ngx.DEBUG, "User row: ", cjson.encode(user))
 
     -- Create the payload for the JWT
     local payload = {
@@ -126,16 +124,13 @@ local function generateToken(username)
         exp = ngx.time() + 3600,
     }
 
-    --ngx.log(ngx.DEBUG, "Payload: ", cjson.encode(payload)) -- Add this line for debugging
-
     -- Generate and return the JWT
     local token, err = jwt:sign(jwt_secret, { header = { typ = "JWT", alg = "HS256" }, payload = payload })
     if not token then
-        --ngx.log(ngx.ERR, "Failed to generate JWT: ", err)
+
         return nil
     end
 
-    --ngx.log(ngx.DEBUG, "Generated Token: ", token)
     return token
 end
 
@@ -156,9 +151,7 @@ local function authenticateRequest()
 
     -- Remove the "Bearer " prefix from the token to get the actual token value
     token = string.gsub(token, "^Bearer%s+", "")
-    -- Verify the JWT token
     local verified_data = verifyToken(token)
-    --ngx.log(ngx.DEBUG, "Verified Data: ", cjson.encode(verified_data))
 
     if not verified_data or not verified_data.payload or not verified_data.payload.sub then
         ngx.log(ngx.DEBUG, "Invalid JWT token or missing 'sub' claim")
@@ -176,8 +169,6 @@ local function checkUserId(userId, taskId)
     if #tasks == 1 then
         -- Check if the task belongs to the authenticated user
         if tasks[1].user ~= userId then
-            ngx.log(ngx.DEBUG, "Task User ID: ", tasks[1].user)
-            ngx.log(ngx.DEBUG, "Authenticated User ID: ", userId)
             returnError(ngx.HTTP_FORBIDDEN, "User is not authorized to access this task")
             return false
         end
@@ -209,15 +200,10 @@ set_cors_headers()
 local function addBackslashes(inputString)
     -- Replace backslashes with double backslashes to escape them
     inputString = inputString:gsub("\\", "\\\\")
-
     -- Replace single quotes with escaped single quotes
     inputString = inputString:gsub("'", "\\'")
-
     -- Replace double quotes with escaped double quotes
     inputString = inputString:gsub('"', '\\"')
-
-    -- Add more replacement patterns if needed for other characters
-
     return inputString
 end
 
@@ -284,7 +270,6 @@ r:post("/task", function(params)
     local result, err = executeQuery(query)
 
     if not result then
-        --delete later
         if string.find(err, "Duplicate entry", 1, true) then
             returnError(ngx.HTTP_CONFLICT, "Task ID already exists. Please choose a different ID.")
         else
@@ -307,7 +292,7 @@ r:get("/tasks", function(params)
     end
 
     local args = ngx.req.get_uri_args()
-    local userId = tonumber(args.userId) -- Convert the userId parameter to a number if provided
+    local userId = tonumber(args.userId)
 
     -- Fetch tasks from the database based on the provided userId or all tasks if userId is not provided
     local query
@@ -333,7 +318,7 @@ r:get("/task/:id", function(params)
     if not userId then
         return
     end
-    local taskId = tonumber(params.id) -- Convert the id parameter to a number
+    local taskId = tonumber(params.id)
     if not taskId then
         returnError(ngx.HTTP_BAD_REQUEST, "Invalid task ID")
         return
@@ -360,7 +345,7 @@ r:put("/task/:id", function(params)
     if not userId then
         return
     end
-    local taskId = tonumber(params.id) -- Convert the id parameter to a number
+    local taskId = tonumber(params.id)
     -- Check if the taskId is a valid number
     if not taskId then
         returnError(ngx.HTTP_BAD_REQUEST, "Invalid task ID")
@@ -391,7 +376,7 @@ r:put("/task/:id", function(params)
             table.insert(fieldsToUpdate, string.format("description = '%s'", addBackslashes(json_data.description)))
         end
         if json_data.completed ~= nil then
-            local completedValue = json_data.completed and 1 or 0
+            local completedValue = tonumber(json_data.completed) or 0
             table.insert(fieldsToUpdate, string.format("completed = %d", completedValue))
         end
 
@@ -403,6 +388,7 @@ r:put("/task/:id", function(params)
         -- Construct the SQL query to update the task
         local update_query = string.format("UPDATE TASKS SET %s WHERE id = %d", table.concat(fieldsToUpdate, ", "),
             taskId)
+            
 
         -- Execute the SQL query
         local result, err = executeQuery(update_query)
@@ -426,7 +412,7 @@ r:delete("/task/:id", function(params)
     if not userId then
         return
     end
-    local taskId = tonumber(params.id) -- Convert the id parameter to a number
+    local taskId = tonumber(params.id)
     if not taskId then
         returnError(ngx.HTTP_BAD_REQUEST, "Invalid task ID")
         return

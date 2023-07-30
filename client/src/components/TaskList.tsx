@@ -23,7 +23,6 @@ function TaskList() {
     }));
     const handleChange = (event: SelectChangeEvent) => {
         store.setFilterMode(event.target.value as string);
-        //store.filter(event.target.value as string);
       };
 
     return (
@@ -33,17 +32,17 @@ function TaskList() {
                     <Grid container spacing={1}>
                         <Box sx={{ minWidth: 120 , }}>
                             <FormControl fullWidth sx={{marginLeft: "10%"}}>
-                                <InputLabel id="demo-simple-select-label">Filter by:</InputLabel>
+                                <InputLabel id="simple-select-label">Filter by:</InputLabel>
                                 <Select
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
+                                    labelId="simple-select"
+                                    id="simple-select"
                                     value={store.filterMode}
                                     label="Filter by:"
                                     onChange={handleChange}
                                 >
-                                    <MenuItem value={"All"}>All</MenuItem>
-                                    <MenuItem value={"Completed"}>Completed</MenuItem>
-                                    <MenuItem value={"Incomplete"}>Incomplete</MenuItem>
+                                    <MenuItem value={"All"} >All</MenuItem>
+                                    <MenuItem value={"Completed"} >Completed</MenuItem>
+                                    <MenuItem value={"Incomplete"} >Incomplete</MenuItem>
                                 </Select>
                             </FormControl>
                         </Box>
@@ -53,7 +52,6 @@ function TaskList() {
                         (task) =>
                             <Item sx={{ backgroundColor: 'grey.100' }} key={task.id}>
                                 <TaskListItem
-                                    key={task.id}
                                     item={task}
                                 />
                             </Item>)}

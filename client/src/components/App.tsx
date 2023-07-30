@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './logo.svg'; //replace
 import Header from "./Header";
 import TaskSummarizer from "./TaskSummarizer";
 import TaskList from './TaskList';
@@ -9,7 +7,7 @@ import store from "../store";
 import { observer } from "mobx-react";
 import Snackbar from '@mui/material/Snackbar';
 import Grid from '@mui/material/Grid';
-//git push origin master
+
 
 function App() {
   return (

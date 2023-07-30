@@ -36,21 +36,9 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
             store.setTaskUpdatedDescription(item, item.description);
         }
     };
-    const doCheck = (): boolean | undefined => {
-        console.log('localStorage["userId"]: ', localStorage["userId"]);
-        console.log('item.user: ', item.user);
-        console.log('typeof localStorage["userId"]: ', typeof localStorage["userId"]);
-        console.log('typeof item.user: ', typeof item.user);
-        console.log('parseInt(localStorage["userId"]): ', parseInt(localStorage["userId"]));
-        console.log('typeof parseInt(localStorage["userId"]: ', typeof parseInt(localStorage["userId"]));
-        console.log(localStorage["userId"] === item.user);
-        console.log(parseInt(localStorage["userId"]) === item.user);
-
-        return parseInt(localStorage["userId"]) !== item.user;
-    }
 
     return (
-        <div key={item.id}>
+        <div>
             {item.editMode ? (
                 <div>
                     <Zoom in={item.editMode}>
@@ -94,11 +82,10 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                                 <Grid item xs={8}>
                                     <Checkbox
                                         checked={item.completed}
-                                        disabled={parseInt(localStorage["userId"]) !== item.user}
                                         onClick={
                                             (e) => {
                                                 e.stopPropagation();
-                                                store.setTaskCompleted(item, !item.completed);
+                                                store.setTaskCompleted(item);
                                             }
                                         }
                                         sx={{ marginTop: '50%', marginLeft: '50%' }}
@@ -115,17 +102,17 @@ const TaskListItem: React.FC<TaskListItemProps> = ({ item }) => {
                                     {item.description}
                                 </Typography>
                                 <Fab color="warning" size="small" aria-label="edit"
-                                    onClick={handleClick} disabled={parseInt(localStorage["userId"]) !== item.user}
+                                    onClick={handleClick}
                                     sx={{ mr: 1 }}>
                                     <EditIcon />
                                 </Fab>
                                 <Fab color="warning" size="small" aria-label="delete"
                                     onClick={() => store.removeTask(item.id)}
                                     sx={{ mr: 1 }}
-                                    disabled={parseInt(localStorage["userId"]) !== item.user}
                                 >
                                     <DeleteIcon />
                                 </Fab>
+                                {localStorage['userId']==='1' && <Typography margin='30px auto auto auto'>Made by user no. {item.user}</Typography>}
                             </AccordionDetails>
                         </Accordion>
                     </Zoom>

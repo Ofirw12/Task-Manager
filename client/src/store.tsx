@@ -11,8 +11,6 @@ export interface Task {
   updatedDescription: string;
 }
 
-//create read update delete with backend implementation
-
 const removeTask = (tasks: Task[], id: number): Task[] =>
   tasks.filter((task) => task.id !== id);
 
@@ -93,8 +91,8 @@ class Tasks {
   setTaskEditMode(task: Task, value: boolean) {
     runInAction(() => task.editMode = value);
   }
-  setTaskCompleted(task: Task, value: boolean) {
-    runInAction(() => task.completed = value);
+  setTaskCompleted(task: Task) {
+    runInAction(() => task.completed = !task.completed);
     this.updateTask(task.id);
   }
   setFilterMode(value: string) : Task[]{
@@ -132,6 +130,7 @@ class Tasks {
     try {
       const taskId = await requestHandler.addTask(this.newTitle, this.newDesc, 0);
       this.setTasks(addTask(this.tasks, this.newTitle, this.newDesc, taskId));
+      console.log(this.tasks.find((task) => task.id=taskId));
       this.setNewTitle("");
       this.setNewDesc("");
     }
@@ -213,10 +212,10 @@ class Tasks {
 
   async login(id: number, password: string) {
     try {
+      await requestHandler.authenticate(id, password);
       localStorage["userId"]=store.UserId;
       store.setUserPassword("");
       store.setUserId("");
-      requestHandler.authenticate(id, password);
       if (parseInt(localStorage["userId"]) === 1) {
         this.adminLoad();
       }
